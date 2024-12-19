@@ -1,0 +1,114 @@
+/* Global Styles */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+  }
+  
+  /* Page Header */
+  .page-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #002c4b; /* Primary color */
+    color: white;
+  }
+  
+  .page-header h1 {
+    position: relative;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .page-header p {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  /* Highlight Pseudo-Element */
+  .page-header h1::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: tomato; /* Secondary color */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Involvement Options */
+  .involvement-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+  }
+
+  @media (min-width: 768px) { /* Adjust breakpoint as needed */
+    .involvement-options {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+  }
+  
+  .involvement-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .involvement-card.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .involvement-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .involvement-content {
+    padding: 20px;
+  }
+  
+  .involvement-title {
+    position: relative;
+    font-size: 1.5rem;
+    color: #002c4b; /* Primary color */
+    margin-bottom: 10px;
+  }
+  
+  .involvement-title::before {
+    content: "•";
+    position: absolute;
+    left: -20px;
+    color: tomato; /* Secondary color */
+    font-size: 2rem;
+    line-height: 1;
+    top: 0;
+  }
+  
+  .involvement-content p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Animations on Scroll */
+  .animate {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .animate.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  

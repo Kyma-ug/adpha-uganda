@@ -1,0 +1,69 @@
+.statistics-section {
+  padding: 6rem 2rem;
+  color: #fff;
+  text-align: center;
+  background: url('./adpha-3.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Fixed background on scroll */
+  position: relative;
+}
+
+.statistics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statistics-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #f8f8f8;
+}
+
+.statistics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.stat-card {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  width: 180px;
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffcc00; /* Highlight color for numbers */
+  margin-bottom: 1rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #f0f0f0;
+}
+
+@keyframes fadeUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .statistics-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 80%;
+  }
+}

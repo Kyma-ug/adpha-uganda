@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Accessibility from './components/accessibility/Accessibility';
+
+
+
+
+
+const Home = lazy(() => import("./pages/home/Home"));
+const AboutUs = lazy(() => import("./pages/aboutus/AboutUs"));
+const Programs = lazy(() => import("./pages/programs/Programs"));
+const Contact = lazy(() => import("./pages/contactus/Contact"));
+const GetInvolved = lazy(() => import("./pages/getinvovled/GetInvolved"));
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+
+        <Suspense>
+          <Header />
+
+          <Accessibility />
+          
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/getinvolved" element={<GetInvolved />} />
+          </Routes>
+          <Footer />
+        </Suspense>
+        
+        
+      </div>
+    </Router>
   );
 }
 

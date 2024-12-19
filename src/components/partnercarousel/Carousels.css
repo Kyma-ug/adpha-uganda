@@ -1,0 +1,70 @@
+/* Carousel.css */
+.carousel-container {
+    width: 80%; /* Covers 80% of the screen */
+    margin: 20px auto; /* Centers the carousel */
+    overflow: hidden; /* Hide scrollbar and overflowing content */
+    position: relative; /* Needed for absolute positioning of dots */
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable smooth snapping */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+    -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+.carousel-item {
+    width: 170;
+    height: 200;
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    scroll-snap-align: start; /* Snap to the start of each item */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.carousel-item img {
+    max-width: 100%; /* Ensure image fits within container */
+    max-height: 200px; /* Set a maximum height for the logos */
+    display: block; /* Prevents a small gap below image */
+}
+
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd; /* Default dot color */
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.carousel-dot.active {
+    background-color: #002c4b; /* Your primary blue color */
+}
+
+@media (min-width: 768px) { 
+    .carousel-container {
+        width: 90%;
+    }
+    .carousel-item {
+        min-width: 90px;
+
+    }
+  }
