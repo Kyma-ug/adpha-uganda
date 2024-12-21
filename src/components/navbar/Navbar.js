@@ -75,6 +75,20 @@ function Navbar() {
 
 
 
+
+
+    // Javascript For the Dropdown
+
+
+    const [isDrawerDropDownOpen, setIsDrawerDropDownOpen] = useState(false);
+
+    const toggleDrawerDropdown = () => {
+      setIsDrawerDropDownOpen(!isDrawerDropDownOpen);
+    };
+    
+
+
+
   return (
     <div className="navbar-container">
                   
@@ -186,6 +200,21 @@ function Navbar() {
                   <Link to={"/contact"}>
                     Contact Us
                   </Link>
+                </li>
+                <li className="drawer-item">
+                  
+                  <span onClick={toggleDrawerDropdown} className="resources-toggle" >
+                    Resources 
+                    <span className={`drawer-icon ${isDrawerDropDownOpen ? "flipped" : ""}`}>
+                      <IoIosArrowDown />
+                    </span>
+                  </span>
+                  <ul className="drawer-dropdown">
+                    <li className="dropdown-item">Reports</li>
+                    <li className="dropdown-item">Blog</li>
+                    <li className="dropdown-item">Testimonials</li>
+                  </ul>
+                  
                 </li>
             </ul>
         </div>

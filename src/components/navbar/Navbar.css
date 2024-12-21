@@ -347,6 +347,53 @@
 
 
 
+/* Dropdown Styling */
+.drawer-dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.drawer-dropdown.open {
+  max-height: 300px; /* Adjust based on dropdown content */
+  opacity: 1;
+}
+
+.drawer-dropdown .dropdown-item {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.drawer-dropdown .dropdown-item:hover {
+  color: #0077cc;
+}
+
+/* Resources Icon Styling */
+.drawer-icon {
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.drawer-icon.flipped {
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 767px) {
   .navbar {
@@ -368,3 +415,6 @@
     display: block;
   }
 }
+
+
+
