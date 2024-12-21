@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Programs Section */
+.programs {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.header-section h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: tomato; /* Secondary color */
+  bottom: -10px;
+}
+
+.header-section p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Programs Grid */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Program Card */
+.program-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid tomato; /* Secondary color */
+}
+
+.image-container.right-box .highlight-box {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 80%;
+  height: 80%;
+  background: tomato; /* Secondary color */
+  opacity: 0.1;
+  z-index: -1;
+  transform: rotate(-5deg);
+}
+
+.image-container.left-box .highlight-box {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 80%;
+  height: 80%;
+  background: tomato; /* Secondary color */
+  opacity: 0.1;
+  z-index: -1;
+  transform: rotate(5deg);
+}
+
+/* Text Content */
+.text-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.text-content h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.text-content h3::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 5px;
+  height: 5px;
+  background-color: tomato; /* Secondary color */
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.text-content p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-content {
+    text-align: left;
+  }
+
+  .header-section h2 {
+    font-size: 2rem;
+  }
+
+  .header-section p {
+    font-size: 1rem;
+  }
+
+  .text-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .text-content p {
+    font-size: 0.85rem;
+  }
+}

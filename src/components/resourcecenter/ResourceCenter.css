@@ -1,0 +1,155 @@
+/* General Styling */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.resource-center {
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Resource Cards Section */
+.resource-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  position: relative;
+  height: 250px;
+  background: url("example-image.jpg") no-repeat center center/cover; /* Replace with your image */
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transition: background 0.3s ease;
+}
+
+.card:hover .card-overlay {
+  background: transparent;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .card-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Layout for Cards */
+@media (max-width: 768px) {
+  .resource-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 200px;
+  }
+}
+
+/* Banner Section */
+.resource-banner {
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.banner-phone {
+  width: 150px;
+}
+
+.banner-text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #333;
+}
+
+.banner-text p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.banner-download {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.playstore-icon {
+  width: 120px;
+  cursor: pointer;
+}
+
+.qr-code {
+  width: 80px;
+}
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-phone {
+    width: 100px;
+  }
+
+  .banner-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  .playstore-icon {
+    width: 100px;
+  }
+
+  .qr-code {
+    width: 60px;
+  }
+}

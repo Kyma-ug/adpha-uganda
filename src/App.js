@@ -10,7 +10,6 @@ import Accessibility from './components/accessibility/Accessibility';
 
 const Home = lazy(() => import("./pages/home/Home"));
 const AboutUs = lazy(() => import("./pages/aboutus/AboutUs"));
-const Programs = lazy(() => import("./pages/programs/Programs"));
 const Contact = lazy(() => import("./pages/contactus/Contact"));
 const GetInvolved = lazy(() => import("./pages/getinvovled/GetInvolved"));
 
@@ -29,7 +28,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/programs" element={<Programs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/getinvolved" element={<GetInvolved />} />
           </Routes>

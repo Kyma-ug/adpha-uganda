@@ -1,6 +1,14 @@
-/* General */
+
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .about-us {
-  /* font-family: Arial, sans-serif; */
   color: #193669; /* Primary Blue */
 }
 

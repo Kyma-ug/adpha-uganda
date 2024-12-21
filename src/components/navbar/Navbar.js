@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { IoMenu } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 
@@ -62,6 +63,17 @@ function Navbar() {
     };
 
 
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+      setIsDropdownOpen(!isDropdownOpen);
+    };
+  
+    const closeDropdown = () => {
+      setIsDropdownOpen(false);
+    };
+
+
 
   return (
     <div className="navbar-container">
@@ -91,6 +103,7 @@ function Navbar() {
                 </li>
                 
                 
+
                 <li
                 className={`nav-item ${activeLink === "about" ? "active" : ""}`}
                 onClick={() => handleLinkClick("about")}
@@ -115,6 +128,25 @@ function Navbar() {
                     Contact Us
                   </Link>
                 
+                </li>
+                {/* <li
+                className={`nav-item ${activeLink === "resources" ? "active" : ""}`}
+                onClick={() => handleLinkClick("resources")}
+                >   */}
+                <li
+                className= {`nav-item ${activeLink === "resources" ? "active" : ""}`}
+                onMouseEnter={toggleDropdown}
+                onMouseLeave={closeDropdown}
+                >  
+                    Resources
+                    <span class="dropdown-icon">
+                      <IoIosArrowDown />
+                    </span>
+                    <ul className={`dropdown-menu ${isDropdownOpen ? "open" : ""}`}>
+                      <li class="dropdown-item" onClick={() => handleLinkClick("resources")}>Reports</li>
+                      <li class="dropdown-item" onClick={() => handleLinkClick("resources")}>Blog</li>
+                      <li class="dropdown-item" onClick={() => handleLinkClick("resources")}>Testimonials</li>
+                    </ul>
                 </li>
             <div className="animated-bar" style={barStyle}></div>
             </ul>
@@ -166,5 +198,24 @@ function Navbar() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default Navbar;

@@ -1,9 +1,11 @@
 import React from 'react';
+import './Home.css';
 import Hero from '../../components/hero/Hero';
 import Intro from '../../components/intro/Intro';
 import MakingADifference from '../../components/makingAdifference/MakingADifference';
 import StatisticsSection from '../../components/statSection/StatisticsSection';
 import Carousels from '../../components/partnercarousel/Carousels';
+
 
 
 import addlogo from './img-01.png';
@@ -41,8 +43,9 @@ const Home = () => {
 
         <Hero />
         <Intro />
-        <MakingADifference />
-        <StatisticsSection />
+        
+        {/* <MakingADifference /> */}
+        {/* <StatisticsSection /> */}
         {/* <PartnersCarousel /> */}
         <Carousels partners={partners} />
     </div>
