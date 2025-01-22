@@ -300,6 +300,7 @@
   padding: 0.5rem 0;
   cursor: pointer;
   text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .drawer-item a {
@@ -333,6 +334,12 @@
   height: 8px;
 }
 
+.drawer-item:hover::before:last-child {
+  width: 0;
+  height: 0;
+}
+
+
 /* Backdrop */
 .backdrop {
   position: fixed;
@@ -347,7 +354,8 @@
 
 
 
-/* Dropdown Styling */
+/* SideDrawer Dropdown Styling */
+
 .drawer-dropdown {
   list-style: none;
   padding: 0;
@@ -386,6 +394,10 @@
   transform: rotate(180deg);
 }
 
+.drawer-dot-margin {
+  margin-left: 5px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
 
 
 

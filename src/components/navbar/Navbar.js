@@ -77,7 +77,7 @@ function Navbar() {
 
 
 
-    // Javascript For the Dropdown
+    // Javascript For the Side Drawer Dropdown
 
 
     const [isDrawerDropDownOpen, setIsDrawerDropDownOpen] = useState(false);
@@ -85,6 +85,21 @@ function Navbar() {
     const toggleDrawerDropdown = () => {
       setIsDrawerDropDownOpen(!isDrawerDropDownOpen);
     };
+
+
+    useEffect(() => {
+      const handleClickOutside = (e) => {
+        if (!e.target.closest(".resources-toggle") && !e.target.closest(".drawer-dropdown")) {
+          setIsDrawerDropDownOpen(false);
+        }
+      };
+    
+      document.addEventListener("click", handleClickOutside);
+    
+      return () => {
+        document.removeEventListener("click", handleClickOutside);
+      };
+    }, []);
     
 
 
@@ -203,16 +218,16 @@ function Navbar() {
                 </li>
                 <li className="drawer-item">
                   
-                  <span onClick={toggleDrawerDropdown} className="resources-toggle" >
+                  <span onClick={toggleDrawerDropdown} className="resources-toggle" aria-expanded={isDrawerDropDownOpen}>
                     Resources 
                     <span className={`drawer-icon ${isDrawerDropDownOpen ? "flipped" : ""}`}>
                       <IoIosArrowDown />
                     </span>
                   </span>
-                  <ul className="drawer-dropdown">
-                    <li className="dropdown-item">Reports</li>
-                    <li className="dropdown-item">Blog</li>
-                    <li className="dropdown-item">Testimonials</li>
+                  <ul className={`drawer-dropdown ${isDrawerDropDownOpen ? "open" : ""}`}>
+                    <li className="dropdown-item drawer-dot-margin">Reports</li>
+                    <li className="dropdown-item drawer-dot-margin">Blog</li>
+                    <li className="dropdown-item drawer-dot-margin">Testimonials</li>
                   </ul>
                   
                 </li>
@@ -227,22 +242,6 @@ function Navbar() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

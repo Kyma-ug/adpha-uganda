@@ -1,4 +1,4 @@
-/* General Styling */
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -22,7 +22,7 @@ body {
 .card {
   position: relative;
   height: 250px;
-  background: url("example-image.jpg") no-repeat center center/cover; /* Replace with your image */
+  background: url("./resource.jpg") no-repeat center center/cover; 
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
@@ -77,7 +77,7 @@ body {
 
 /* Banner Section */
 .resource-banner {
-  background-color: #f4f4f4; /* Light gray background */
+  background-color: #f4f4f4; 
   padding: 3rem 2rem;
   display: flex;
   flex-wrap: wrap;

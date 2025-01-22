@@ -19,6 +19,7 @@ import dfhug from './img-08.png';
 import drf from './img-09.png';
 import nerve from './img-10.png';
 import frontline from './img-11.png';
+import ResourceCenter from '../../components/resourcecenter/ResourceCenter';
 
 
 const partners = [
@@ -48,6 +49,7 @@ const Home = () => {
         {/* <StatisticsSection /> */}
         {/* <PartnersCarousel /> */}
         <Carousels partners={partners} />
+        <ResourceCenter />
     </div>
 
 
