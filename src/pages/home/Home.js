@@ -45,8 +45,8 @@ const Home = () => {
         <Hero />
         <Intro />
         
-        {/* <MakingADifference /> */}
-        {/* <StatisticsSection /> */}
+        <MakingADifference />
+        <StatisticsSection />
         {/* <PartnersCarousel /> */}
         <Carousels partners={partners} />
         <ResourceCenter />

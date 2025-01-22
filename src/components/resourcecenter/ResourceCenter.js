@@ -12,17 +12,17 @@ const ResourceCenter = () => {
         {/* Card 1 */}
         <div className="card card-a">
           <div className="card-overlay"></div>
-          <div className="card-title">Resource Title 1</div>
+          <div className="card-title">2024 - 2029 Strategic Plan</div>
         </div>
         {/* Card 2 */}
         <div className="card card-b">
           <div className="card-overlay"></div>
-          <div className="card-title">Resource Title 2</div>
+          <div className="card-title">Accessibility Assessment of Health Services</div>
         </div>
         {/* Card 3 */}
         <div className="card card-c">
           <div className="card-overlay"></div>
-          <div className="card-title">Resource Title 3</div>
+          <div className="card-title">2024 Annual Report</div>
         </div>
       </section>
 
@@ -35,7 +35,7 @@ const ResourceCenter = () => {
             className="banner-phone"
           />
           <div className="banner-text">
-            <h2>Download OneImpact App</h2>
+            <h2>Download the OneImpact App</h2>
             <p>Connect with TB support, information, and resources through the free One Impact app.</p>
             <div className="banner-download">
               <img
