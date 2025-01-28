@@ -11,21 +11,21 @@ const ResourceCenter = () => {
       <section className="resource-cards">
         {/* Card 1 */}
         <div className="card card-a"
-          onClick={() => window.open("./ADPHA_UGANDA_ANNUAL_REPORT_2023.pdf", "_blank")}
+          onClick={() => window.open("/ADPHA_UGANDA_ANNUAL_REPORT_2023.pdf", "_blank")}
         >
           <div className="card-overlay"></div>
           <div className="card-title">2024 - 2029 Strategic Plan</div>
         </div>
         {/* Card 2 */}
         <div className="card card-b"
-          onClick={() => window.open("./MADIPHA Accessibility Assessment of Health Services Final Report. Accessible Format 23 March 2023.pdf", "_blank")}
+          onClick={() => window.open("/MADIPHA Accessibility Assessment of Health Services Final Report. Accessible Format 23 March 2023.pdf", "_blank")}
         >
           <div className="card-overlay"></div>
           <div className="card-title">Accessibility Assessment of Health Services</div>
         </div>
         {/* Card 3 */}
         <div className="card card-c"
-          onClick={() => window.open("./Covid 19 -KNOWLEDGE ATITUDE AND PRACTICES Survey.pdf", "_blank")}
+          onClick={() => window.open("/Covid 19 -KNOWLEDGE ATITUDE AND PRACTICES Survey.pdf", "_blank")}
         >
           <div className="card-overlay"></div>
           <div className="card-title">2024 Annual Report</div>
