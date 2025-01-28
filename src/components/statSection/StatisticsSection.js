@@ -57,7 +57,7 @@ const StatisticsSection = () => {
       icon: "fa-solid fa-users", // Font Awesome class
     },
     {
-      target: 127,
+      target: 32,
       label: "Programs Delivered",
       icon: "fa-solid fa-hand-holding-heart",
     },
@@ -72,7 +72,7 @@ const StatisticsSection = () => {
       icon: "fa-solid fa-handshake",
     },
     {
-      target: 15,
+      target: 9,
       label: "Years of Service",
       icon: "fa-solid fa-clock",
     },
