@@ -8,7 +8,7 @@ const ContactHeader = () => {
         
         <div className='contact-header-li'>
             <FaLocationDot />
-            <p>Muto Complex, main Floor Room 19, opposite Tropical Bank,<br/> Masaka, Uganda</p>
+            <p>Muto Complex, main Floor Room 19,<br/> Masaka, Uganda</p>
 
         </div>
         <div className='contact-header-li'>
