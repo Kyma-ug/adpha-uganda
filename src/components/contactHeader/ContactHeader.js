@@ -13,7 +13,7 @@ const ContactHeader = () => {
         </div>
         <div className='contact-header-li'>
             <FaClock />
-            <p>Open 8am-5:30pm: Monday - Friday</p>
+            <p>Open 8am-5:00pm: Monday - Friday</p>
 
         </div>
         <div className='contact-header-li'>
