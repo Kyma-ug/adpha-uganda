@@ -63,7 +63,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>© 2024 ADPHA Uganda. All Rights Reserved.</p>
+        <p>© 2025 ADPHA Uganda. All Rights Reserved.</p>
       </div>
     </footer>
   );
