@@ -27,7 +27,7 @@ const partners = [
   { id: 2, name: 'Partner 2', logo: stoptbpart, website: 'https://www.stoptb.org/' },
   { id: 3, name: 'Partner 3', logo: amplify, website: 'https://amplifychange.org/' },
   { id: 4, name: 'Partner 6', logo: drf, website: 'https://www.disabilityrightsfund.org/' },
-  { id: 5, name: 'Partner 10', logo: stoptb, website: 'https://ustp.org.ug/' },
+  // { id: 5, name: 'Partner 10', logo: stoptb, website: 'https://ustp.org.ug/' },
   { id: 6, name: 'Partner 5', logo: frontline, website: 'https://frontlineaids.org/' },
   { id: 7, name: 'Partner 8', logo: tag, website: 'https://www.treatmentactiongroup.org/' },
   { id: 8, name: 'Partner 4', logo: dfhug, website: 'https://x.com/DhfUganda' },
