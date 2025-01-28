@@ -53,9 +53,9 @@ const Footer = () => {
         <div className="footer-column">
           <h4 className="footer-heading">Visit Us</h4>
           <address className="footer-address">
-            Plot 2 | Broadway Rd,<br />
+            Muto Complex, main Floor Room 19, opposite Tropical Bank,<br />
             Masaka, Uganda<br />
-            Open 8am-5:30pm: Monday - Friday<br /><br />
+            Open 8am-5:00pm: Monday - Friday<br /><br />
             <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Get Directions</a>
           </address>
         </div>

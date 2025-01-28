@@ -9,7 +9,7 @@ import Carousels from '../../components/partnercarousel/Carousels';
 
 
 import addlogo from './img-01.png';
-import stoptb from './img-02.png';
+// import stoptb from './img-02.png';
 import tag from './img-03.png';
 import voice from './voice-uganda.png';
 import stoptbpart from './img-05.png';

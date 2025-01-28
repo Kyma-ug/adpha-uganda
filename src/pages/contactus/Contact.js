@@ -19,7 +19,7 @@ const Contact = () => {
           <div className="contact-info">
             <h2>Get in touch</h2>
             <div className="contact-item">
-              <p><strong>Address:</strong> Plot 2 | Broadway Rd, Masaka, Uganda</p>
+              <p><strong>Address:</strong> Muto Complex, main Floor Room 19, opposite Tropical Bank, Masaka, Uganda</p>
             </div>
             <div className="contact-item">
               <p><strong>Phone:</strong> +256 (0) 783 818 294  |  +256 (0) 800 111 499</p>
