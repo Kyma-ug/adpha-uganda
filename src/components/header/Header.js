@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from '../navbar/Navbar';
-import ContactHeader from '../contactHeader/ContactHeader';
+// import ContactHeader from '../contactHeader/ContactHeader';
 import './Header.css';
 
 
 const Header = () => {
   return (
     <header>
-        <ContactHeader />
+        {/* <ContactHeader /> */}
         <Navbar />
     </header>
     

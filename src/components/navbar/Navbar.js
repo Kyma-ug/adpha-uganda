@@ -9,7 +9,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import "./Navbar.css";
 
-import adphalogo from './adpha-logo-navbar.png';
+import adphalogo from './ADPHA_Uganda_Logo-Navbar.svg';
 
 function Navbar() {
   const navigate = useNavigate();
@@ -111,10 +111,10 @@ function Navbar() {
             <div className="adpha-navbar-logo">
                 <img src={adphalogo} alt="Inclusive Advocacy" />
             </div>
-            <div className="adpha-logo-text">
+            {/* <div className="adpha-logo-text">
                 <strong>ADPHA Uganda</strong>
                 <p>Dedication . <span>Service</span> . Hope</p>
-            </div>
+            </div> */}
             
         </a>
 
