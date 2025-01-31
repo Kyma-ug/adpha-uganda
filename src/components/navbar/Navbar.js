@@ -9,7 +9,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import "./Navbar.css";
 
-import adphalogo from './ADPHA_Uganda_Logo-Navbar.svg';
+import adphalogo from '/ADPHA_Uganda_Logo-Navbar.svg';
 
 function Navbar() {
   const navigate = useNavigate();
