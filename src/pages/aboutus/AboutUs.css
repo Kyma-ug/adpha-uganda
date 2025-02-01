@@ -1,112 +1,109 @@
 
-
-body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-.about-us {
-  color: #193669; /* Primary Blue */
-}
-
-/* Hero Section */
-.about-hero {
-  background-color: #193669;
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.about-hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.about-hero p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Mission and Vision Section */
-.mission-vision {
+.hero {
+  width: 100%;
+  position: relative;
+  background: url('./ADPHA-team.jpg') no-repeat center center/cover;
+  height: 300px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  padding: 40px 20px;
-  background-color: #f4f4f4;
+  padding: 2rem 1rem;
+  
 }
 
-.mission,
-.vision {
-  flex: 1;
-  max-width: 500px;
-  padding: 20px;
-  background: #fff;
-  border-left: 5px solid tomato; /* Secondary Color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.hero-content {
+  width: 100%;
+  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  z-index: 10;
 }
 
-.mission h2,
-.vision h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-}
-
-/* Impact Section */
-.impact {
-  background-image: url("./ADPHA-Uganda_Skill_Aquisition_for_PWDs.jpg"); 
-  background-attachment: fixed;
-  background-size: cover;
-  color: #fff;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.impact h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.impact-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.card {
-  flex: 1;
-  max-width: 300px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #193669;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Scroll Animations */
-.animate-on-scroll {
+.hero-title {
+  font-size: 3rem; /* Large and bold */
+  font-weight: 700;
+  color: #fff; /* Dark color for readability */
+  margin-bottom: 0.5rem;
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.6s ease-in-out;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
-.animate-on-scroll.animated {
-  opacity: 1;
-  transform: translateY(0);
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-dash {
+  width: 100px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #0073e6, #00a8ff); /* Blue gradient */
+  margin-bottom: 1.5rem;
+  transform-origin: left; /* Scale from the left */
+  transform: scaleX(0); /* Start with 0 width */
+  animation: scaleIn 1s ease-out 0.3s forwards; /* Slight delay */
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Adjust as needed */
+  object-fit: cover;
+  border-radius: 8px; /* Optional: Soft edges */
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    transform: scaleX(1); /* Scale to full width */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem; /* Slightly smaller on mobile */
+  }
+
+  .hero-dash {
+    width: 50px;
+    height: 3px;
+  }
+}
+
+/* Cross-browser Compatibility */
+@-webkit-keyframes fadeInUp {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes scaleIn {
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 }
