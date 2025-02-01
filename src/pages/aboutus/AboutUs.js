@@ -1,24 +1,28 @@
 import React from 'react';
 import './AboutUs.css'; 
 
+import WhoWeAreAboutUs from '../../components/whoWeAreAboutUs/whoWeAreAboutUs';
+
 const AboutUsHero = () => {
   return (
-    <section aria-labelledby="about-us-title" className="hero">
-      <div className="hero-content">
+    <main>
 
-        <h1 id="about-us-title" className="hero-title">About Us</h1>
-        <div className="hero-dash" aria-hidden="true"></div>
-      </div>
-      <div className='overlay'>
+      <section aria-labelledby="about-us-title" className="hero">
+        <div className="hero-content">
 
-      </div>
-      {/* <img 
-        src="path-to-your-banner-image.jpg" 
-        alt="ADPHA - Association of Persons with Disabilities living with HIV" 
-        className="hero-image" 
-        loading="lazy" // Lazy loading for optimization
-      /> */}
-    </section>
+          <h1 id="about-us-title" className="hero-title">About Us</h1>
+          <div className="hero-dash" aria-hidden="true"></div>
+        </div>
+        <div className='overlay'>
+
+        </div>
+        
+      </section>
+
+      <WhoWeAreAboutUs />
+
+      
+    </main>
   );
 };
 

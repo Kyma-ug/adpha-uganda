@@ -1,0 +1,168 @@
+
+.who-we-are {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    background-color: #fff; 
+  }
+  
+  .who-we-are-content {
+    flex: 1 1 60%; 
+    max-width: 60%;
+    padding-right: 2rem; 
+  }
+  
+  .who-we-are-title {
+    font-size: 2.5rem; 
+    font-weight: 700;
+    color: #333; 
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .who-we-are-dash {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #0073e6, #00a8ff); 
+    margin-bottom: 1.5rem;
+    transform-origin: left; 
+    transform: scaleX(0); 
+    animation: scaleIn 1s ease-out 0.3s forwards; 
+  }
+  
+  .who-we-are-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555; /* Slightly lighter color for readability */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 0.6s forwards; /* Delay for text */
+  }
+  
+  .image-container {
+    flex: 1 1 35%; /* Take 35% of the width on larger screens */
+    max-width: 35%;
+    position: relative; /* For positioning the background rectangle */
+  }
+  
+  .who-we-are-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Soft edges */
+    object-fit: cover;
+    position: relative; /* Ensure it stacks above the background */
+    z-index: 2; /* Place image above the background */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 0.9s forwards; /* Delay for image */
+  }
+  
+  .image-background {
+    position: absolute;
+    top: 20px; /* Displace to the bottom */
+    left: 20px; /* Displace to the right */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0073e6, #00a8ff); /* Gradient */
+    border-radius: 8px; /* Match image border radius */
+    z-index: 1; /* Place behind the image */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 0.9s forwards; /* Sync with image */
+  }
+  
+
+  .image-container {
+    flex: 1 1 35%; /* Take 35% of the width on larger screens */
+    max-width: 35%;
+    position: relative; /* For positioning the background rectangle */
+  }
+  
+  .who-we-are-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Soft edges */
+    object-fit: cover;
+    position: relative; /* Ensure it stacks above the background */
+    z-index: 2; /* Place image above the background */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 0.9s forwards; /* Delay for image */
+  }
+  
+  .image-background {
+    position: absolute;
+    top: 20px; /* Displace to the bottom */
+    left: 20px; /* Displace to the right */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0073e6, #00a8ff); /* Gradient */
+    border-radius: 8px; /* Match image border radius */
+    z-index: 1; /* Place behind the image */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 0.9s forwards; /* Sync with image */
+  }
+  
+  
+
+
+  
+  /* Animation Keyframes */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    to {
+      transform: scaleX(1); /* Scale to full width */
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .who-we-are-content {
+      flex: 1 1 100%; /* Full width on mobile */
+      max-width: 100%;
+      padding-right: 0; /* Remove padding on mobile */
+    }
+  
+    .who-we-are-title {
+      font-size: 2rem; /* Slightly smaller on mobile */
+    }
+  
+    .who-we-are-dash {
+      width: 50px;
+      height: 3px;
+    }
+  
+    .who-we-are-image {
+      flex: 1 1 100%; /* Full width on mobile */
+      max-width: 100%;
+      margin-top: 1.5rem; /* Space between text and image */
+    }
+  }
+  
+  /* Cross-browser Compatibility */
+  @-webkit-keyframes fadeInUp {
+    to {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  
+  @-webkit-keyframes scaleIn {
+    to {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
