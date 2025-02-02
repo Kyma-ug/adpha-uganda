@@ -49,6 +49,18 @@
     animation: scaleIn 1s ease-out 0.3s forwards; /* Slight delay */
   }
   
+  .our-mission-dash {
+    width: 70px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #0073e6, #00a8ff); /* Blue gradient */
+    margin-bottom: 2rem;
+    transform-origin: left; /* Scale from the left */
+    transform: scaleX(0); /* Start with 0 width */
+    animation: scaleIn 1s ease-out 0.3s forwards; /* Slight delay */
+  }
+
+
   .mission-vision-cards {
     display: flex;
     flex-wrap: wrap;
@@ -119,9 +131,9 @@
   }
   
   .card-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
-    color: #555;
+    color: #333;
   }
   
   /* Animation Keyframes */
