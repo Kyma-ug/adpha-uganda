@@ -2,6 +2,7 @@ import React from 'react';
 import './AboutUs.css'; 
 
 import WhoWeAreAboutUs from '../../components/whoWeAreAboutUs/whoWeAreAboutUs';
+import MissionVision from '../../components/missionVision/MissionVision';
 
 const AboutUsHero = () => {
   return (
@@ -20,6 +21,7 @@ const AboutUsHero = () => {
       </section>
 
       <WhoWeAreAboutUs />
+      <MissionVision />
 
       
     </main>
