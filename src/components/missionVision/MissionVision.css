@@ -18,7 +18,7 @@
     background-position: center;
     background-attachment: fixed; /* Parallax effect */
     z-index: 1; /* Place behind content */
-    opacity: 0.8; /* Adjust opacity for better readability */
+    /* opacity: 0.8;  */
   }
   
   .mission-vision-content {
@@ -76,21 +76,36 @@
     background-color: #ff4757; /* Red color */
   }
   
-  .mission-card::after,
+  .mission-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%; /* Cover 1/4 of the box */
+    height: 40%;
+
+    background-image: url('./mission-adpha.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    z-index: 1;
+  }
+  
   .vision-card::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
-    width: 25%; /* Cover 1/4 of the box */
-    height: 100%;
-    background-image: url('./mission-adpha.svg'); /* Add your SVG */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.2; /* Subtle effect */
+    width: 40%; /* Cover 1/4 of the box */
+    height: 40%;
+    background-image: url('./vision-adpha.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
     z-index: 1;
   }
-  
+
+
   .card-content {
     position: relative;
     z-index: 2; /* Place above SVG background */
