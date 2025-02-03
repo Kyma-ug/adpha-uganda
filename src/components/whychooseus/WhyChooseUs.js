@@ -1,4 +1,4 @@
-// WhyChooseUs.jsx
+
 import React from 'react';
 import './WhyChooseUs.css';
 import { motion } from 'framer-motion';
@@ -36,10 +36,10 @@ const WhyChooseUs = () => {
           initial={{ opacity: 0, y: 30 }} 
           whileInView={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="image-container"
+          // className="image-container"
         >
-          <div className="image-background"></div>
           <img src={whyChooseUsImage} alt="Why Choose Us - ADPHA Uganda" className="image" />
+          {/* <div className="image-background-why"></div> */}
         </motion.div>
       </div>
     </section>
