@@ -3,6 +3,7 @@ import './AboutUs.css';
 
 import WhoWeAreAboutUs from '../../components/whoWeAreAboutUs/whoWeAreAboutUs';
 import MissionVision from '../../components/missionVision/MissionVision';
+import WhyChooseUs from '../../components/whychooseus/WhyChooseUs';
 
 const AboutUsHero = () => {
   return (
@@ -22,6 +23,7 @@ const AboutUsHero = () => {
 
       <WhoWeAreAboutUs />
       <MissionVision />
+      <WhyChooseUs />
 
       
     </main>

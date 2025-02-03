@@ -6,8 +6,7 @@ const MissionVision = () => {
     <section aria-labelledby="mission-vision-title" className="mission-vision">
       <div className="parallax-background"></div>
       <div className="mission-vision-content">
-        <h2 id="mission-vision-title" className="mission-vision-title">Our Mission & Vision</h2>
-        <div className="mission-vision-dash" aria-hidden="true"></div>
+        
         <div className="mission-vision-cards">
           <div className="mission-card">
             <div className="card-content">

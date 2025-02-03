@@ -1,4 +1,4 @@
-/* MissionVision Section Styling */
+
 .mission-vision {
     width: 100%;
     position: relative;
@@ -18,7 +18,7 @@
     background-position: center;
     background-attachment: fixed; /* Parallax effect */
     z-index: 1; /* Place behind content */
-    /* opacity: 0.8;  */
+    
   }
   
   .mission-vision-content {
@@ -27,26 +27,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-  }
-  
-  .mission-vision-title {
-    font-size: 2.5rem; /* Large and bold */
-    font-weight: 700;
-    color: #333; /* Dark color for readability */
-    margin-bottom: 0.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-  }
-  
-  .mission-vision-dash {
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #0073e6, #00a8ff); /* Blue gradient */
-    margin-bottom: 2rem;
-    transform-origin: left; /* Scale from the left */
-    transform: scaleX(0); /* Start with 0 width */
-    animation: scaleIn 1s ease-out 0.3s forwards; /* Slight delay */
   }
   
   .our-mission-dash {
@@ -95,7 +75,6 @@
     right: 0;
     width: 40%; /* Cover 1/4 of the box */
     height: 40%;
-
     background-image: url('./mission-adpha.svg'); 
     background-size: contain;
     background-repeat: no-repeat;
