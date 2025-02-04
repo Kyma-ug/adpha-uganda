@@ -5,6 +5,7 @@ import WhoWeAreAboutUs from '../../components/whoWeAreAboutUs/whoWeAreAboutUs';
 import MissionVision from '../../components/missionVision/MissionVision';
 import WhyChooseUs from '../../components/whychooseus/WhyChooseUs';
 import CoreValues from '../../components/coreValues/CoreValues';
+import TeamCarousel from '../../components/teamCarousel/TeamCarousel';
 
 const AboutUsHero = () => {
   return (
@@ -26,6 +27,7 @@ const AboutUsHero = () => {
       <MissionVision />
       <CoreValues />
       <WhyChooseUs />
+      <TeamCarousel />
 
       
     </main>
