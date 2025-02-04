@@ -1,58 +1,10 @@
-Team Carousel
-
-
-
+/* Team Carousel */
 .team-carousel {
   max-width: 1200px;
   margin: auto;
   padding: 4rem 2rem;
   text-align: center;
 }
-
-/* ... (rest of your CSS) */
-
-.carousel-container {
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling */
-  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS devices */
-    margin-top: 2rem;
-    position: relative;
-    padding: 1rem 0;
-}
-
-.carousel-track {
-  display: flex; /* Ensure cards are arranged horizontally */
-  gap: 1rem; /* Space between cards */
-  /* Remove transition from here */
-}
-
-.carousel-card {
-  /* flex: 1 0 calc(100% / 3 - 1rem);  Remove flex from here*/
-  padding: 1rem;
-  perspective: 1000px;
-  cursor: pointer;
-  height: 380px; /* Maintain consistent height */
-  position: relative;
-  transition: transform 0.3s ease;
-  /* Add width and shrink below */
-}
-
-/* ... (rest of your CSS) */
-
-/* Slow down animation on hover */
-.carousel-card:hover .card-front,
-.carousel-card:hover .card-back {
-  transition: transform 0.8s ease; /* Increased duration for slower animation */
-}
-
-@media (max-width: 768px) {
-  .carousel-card {
-    /* flex: 1 0 calc(100% - 1rem);  Remove flex from here*/
-  }
-}
-
-
-
 
 .carousel-title {
   font-size: 2rem;
@@ -67,7 +19,38 @@ Team Carousel
   width: 80px;
 }
 
+/* Carousel Container */
+.carousel-container {
+  overflow: hidden;
+  margin-top: 2rem;
+  position: relative;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
 
+.carousel-track {
+  transition: transform 1.5s ease-in-out;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Carousel Card */
+.carousel-card {
+  perspective: 1000px;
+  cursor: pointer;
+  height: 380px;
+  position: relative;
+  transition: transform 0.8s ease;
+}
+
+.carousel-card.flipping .card-front {
+  transform: rotateY(180deg);
+}
+
+.carousel-card.flipping .card-back {
+  transform: rotateY(0deg);
+}
 
 .card-face {
   background: white;
@@ -97,58 +80,41 @@ Team Carousel
   position: relative;
 }
 
-.carousel-card:hover .card-front {
-  transform: rotateY(180deg);
-}
+/* ... (rest of your card styles - image, name, title, message, quotes) */
 
-.carousel-card:hover .card-back {
-  transform: rotateY(0deg);
-}
-
-/* Ensure the card does NOT shrink on hover */
-.carousel-card:hover {
-  transform: none;
-}
-
-/* Team Member Image */
-.team-image {
-  width: 100%;
-  max-width: 240px; /* Responsive image size */
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-/* Member Details */
-.team-name {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.team-title {
-  font-size: 1rem;
-  color: gray;
-}
-
-/* Back Card Message */
-.team-message {
-  font-size: 1rem;
-  color: #333;
-  padding: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-/* Background Quotes SVG */
-.quotes-bg {
+.carousel-nav {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
-  opacity: 0.1;
+  padding: 0 1rem;
   z-index: 1;
+  pointer-events: none;
+}
+
+.carousel-icon {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  pointer-events: auto;
+  transition: color 0.3s ease;
+}
+
+.carousel-icon:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  /* Any specific styles for the previous icon */
+}
+
+.next {
+  /* Any specific styles for the next icon */
 }
 
 /* Animated Dots */
@@ -171,10 +137,5 @@ Team Carousel
   background: red;
 }
 
-
-
-
-
-
-
-
+/* Responsive Adjustments */
+/* @media (max-width: 768px) { */
