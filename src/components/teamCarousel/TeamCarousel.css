@@ -15,9 +15,11 @@
 
 .title-dash {
   height: 4px;
-  background: red;
+  border-radius: 2px;
+  /* background: red; */
+  background: linear-gradient(90deg, #007bff, #0056b3);
   margin: auto;
-  width: 80px;
+  width: 100px;
   transform-origin: left;
 }
 
@@ -30,7 +32,7 @@
 .carousel-track {
   display: flex;
   gap: 1rem;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 2s ease-in-out;
 }
 
 /* Carousel Card */
@@ -159,7 +161,8 @@
 }
 
 .dot.active {
-  background: red;
+  background: #007bff;
+  /* background: linear-gradient(90deg, #007bff, #0056b3); */
 }
 
 /* Responsive */

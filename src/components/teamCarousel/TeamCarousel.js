@@ -57,7 +57,7 @@ const TeamCarousel = () => {
     const startAutoscroll = () => {
       intervalRef.current = setInterval(() => {
         setCurrentIndex((prev) => (prev + cardsPerPage) % teamMembers.length);
-      }, 10000);
+      }, 15000);
     };
 
     startAutoscroll();
@@ -98,7 +98,9 @@ const TeamCarousel = () => {
       <motion.h2
         className="carousel-title"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        // animate={}
+        // animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         Meet Our Team
@@ -106,7 +108,8 @@ const TeamCarousel = () => {
       <motion.div
         className="title-dash"
         initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
+        whileInView={{ scaleX: 1 }}
+        // animate={{ scaleX: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       />
 
