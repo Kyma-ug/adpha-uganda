@@ -1,10 +1,58 @@
-/* Team Carousel */
+Team Carousel
+
+
+
 .team-carousel {
   max-width: 1200px;
   margin: auto;
   padding: 4rem 2rem;
   text-align: center;
 }
+
+/* ... (rest of your CSS) */
+
+.carousel-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS devices */
+    margin-top: 2rem;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.carousel-track {
+  display: flex; /* Ensure cards are arranged horizontally */
+  gap: 1rem; /* Space between cards */
+  /* Remove transition from here */
+}
+
+.carousel-card {
+  /* flex: 1 0 calc(100% / 3 - 1rem);  Remove flex from here*/
+  padding: 1rem;
+  perspective: 1000px;
+  cursor: pointer;
+  height: 380px; /* Maintain consistent height */
+  position: relative;
+  transition: transform 0.3s ease;
+  /* Add width and shrink below */
+}
+
+/* ... (rest of your CSS) */
+
+/* Slow down animation on hover */
+.carousel-card:hover .card-front,
+.carousel-card:hover .card-back {
+  transition: transform 0.8s ease; /* Increased duration for slower animation */
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    /* flex: 1 0 calc(100% - 1rem);  Remove flex from here*/
+  }
+}
+
+
+
 
 .carousel-title {
   font-size: 2rem;
@@ -19,30 +67,7 @@
   width: 80px;
 }
 
-/* Carousel Container */
-.carousel-container {
-  overflow: hidden;
-  margin-top: 2rem;
-  position: relative;
-  padding: 1rem 0; /* Add spacing above and below */
-}
 
-.carousel-track {
-  display: flex;
-  gap: 1rem; /* Space between cards */
-  transition: transform 1.5s ease-in-out;
-}
-
-/* Carousel Card */
-.carousel-card {
-  flex: 1 0 calc(100% / 3 - 1rem); /* 3 cards per row, considering gap */
-  padding: 1rem;
-  perspective: 1000px;
-  cursor: pointer;
-  height: 380px; /* Maintain consistent height */
-  position: relative;
-  transition: transform 0.3s ease;
-}
 
 .card-face {
   background: white;
@@ -146,9 +171,10 @@
   background: red;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .carousel-card {
-    flex: 1 0 calc(100% / 2 - 1rem); /* 2 cards per row on mobile */
-  }
-}
+
+
+
+
+
+
+
