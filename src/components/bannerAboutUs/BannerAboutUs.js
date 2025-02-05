@@ -6,6 +6,8 @@ import "./BannerAboutUs.css";
 const BannerAboutUs = () => {
   return (
     <section className="banner-about-us">
+
+        <div className="banner-overlay-about-us"></div>
       <div className="banner-content-about-us">
         <motion.h2
           className="banner-title-about-us"
