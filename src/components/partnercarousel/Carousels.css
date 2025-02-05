@@ -1,9 +1,30 @@
-.carousel-container {
-    width: 90%; /* Covers 90% of the screen */
-    margin: 20px auto; /* Centers the carousel */
-    overflow: hidden; /* Hide scrollbar and overflowing content */
-    position: relative; /* Needed for absolute positioning of dots */
+.carousel-container-partners {
+    width: 90%; 
+    margin: 20px auto; 
+    overflow: hidden;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+.section-title-partners {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .title-dash-partners {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    /* margin: auto; */
+    margin-bottom: 1.5rem;
+    width: 100px;
+    
+  }
+
 
 .carousel {
     display: flex;

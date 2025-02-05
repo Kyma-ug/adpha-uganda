@@ -1,4 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+
+import { motion } from 'framer-motion';
+
+
 import './Carousels.css';
 
 
@@ -46,7 +50,26 @@ const Carousels = ({ partners }) => {
     };
 
     return (
-        <div className="carousel-container">
+        <div className="carousel-container-partners">
+
+            <motion.h2
+                className="section-title-partners"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
+                Our Partners
+            </motion.h2>
+
+            <motion.div
+                className="title-dash-partners"
+                initial={{  width: 0  }}
+                whileInView={{ width: "100px" }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+
+            />
             <div className="carousel" ref={carouselRef}>
                 {duplicatedPartners.map((partner, index) => (
                     <a
