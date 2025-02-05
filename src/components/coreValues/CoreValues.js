@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 import "./CoreValues.css";
 
 
-// import ADPHAEquityIcon from "./ADPHA_Equity_Icon.svg";
-// import ADPHAEmpathyIcon from "./ADPHA_Empathy_Icon.svg";
-// import ADPHALearningIcon from "./ADPHA_Learning.svg";
-// import ADPHAPartnershipIcon from "./ADPHA_Partnership.svg";
-// import ADPHATeamworkIcon from "./ADPHA_Teamwork.svg";
-// import ADPHATransparencyIcon from "./ADPHA_Transparency.svg";
+import ADPHAEquityIcon from "./ADPHA_Equity_Icon.svg";
+import ADPHAEmpathyIcon from "./ADPHA_Empathy_Icon.svg";
+import ADPHALearningIcon from "./ADPHA_Learning.svg";
+import ADPHAPartnershipIcon from "./ADPHA_Partnership.svg";
+import ADPHATeamworkIcon from "./ADPHA_Teamwork.svg";
+import ADPHATransparencyIcon from "./ADPHA_Transparency.svg";
 
 
 
-import { ReactComponent as ADPHAEquityIcon } from "./ADPHA_Equity_Icon.svg";
-import { ReactComponent as ADPHAEmpathyIcon } from "./ADPHA_Empathy_Icon.svg";
-import { ReactComponent as ADPHALearningIcon } from "./ADPHA_Learning.svg";
-import { ReactComponent as ADPHAPartnershipIcon } from "./ADPHA_Partnership.svg";
-import { ReactComponent as ADPHATeamworkIcon } from "./ADPHA_Teamwork.svg";
-import { ReactComponent as ADPHATransparencyIcon } from "./ADPHA_Transparency.svg";
+// import { ReactComponent as ADPHAEquityIcon } from "./ADPHA_Equity_Icon.svg";
+// import { ReactComponent as ADPHAEmpathyIcon } from "./ADPHA_Empathy_Icon.svg";
+// import { ReactComponent as ADPHALearningIcon } from "./ADPHA_Learning.svg";
+// import { ReactComponent as ADPHAPartnershipIcon } from "./ADPHA_Partnership.svg";
+// import { ReactComponent as ADPHATeamworkIcon } from "./ADPHA_Teamwork.svg";
+// import { ReactComponent as ADPHATransparencyIcon } from "./ADPHA_Transparency.svg";
 
 
 
