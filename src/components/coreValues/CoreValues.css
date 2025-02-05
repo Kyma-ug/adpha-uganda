@@ -6,12 +6,23 @@
     margin: auto;
   }
   
-  .section-title {
+  .section-title-core-values {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
   }
   
+  .title-dash-core {
+    height: 4px;
+    border-radius: 2px;
+    /* background: red; */
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    margin: auto;
+    width: 100px;
+    transform-origin: left;
+  }
+
+
   .values-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -106,7 +106,7 @@
 
 .quotes-bg {
   position: absolute;
-  opacity: 0.1;
+  opacity: 0.25;
   width: 80%;
   height: 80%;
 }
@@ -152,8 +152,8 @@
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   background: gray;
   border-radius: 50%;
   margin: 0 5px;

@@ -107,9 +107,8 @@ const TeamCarousel = () => {
       </motion.h2>
       <motion.div
         className="title-dash"
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        // animate={{ scaleX: 1 }}
+        initial={{  width: 0  }}
+        whileInView={{ width: "80px" }}
         transition={{ duration: 0.8, delay: 0.3 }}
       />
 
