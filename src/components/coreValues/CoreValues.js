@@ -49,7 +49,7 @@ const CoreValues = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            // viewport={{ once: true }}
+            viewport={{ once: true }}
           >
             <img src={value.icon} alt={`${value.title} icon`} className="icon-wrapper" />
             <h3 className="value-title">{value.title}</h3>
