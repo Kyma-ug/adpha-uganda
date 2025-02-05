@@ -61,9 +61,10 @@ const CoreValues = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <img src={value.icon} alt={`${value.title} icon`} className="icon-wrapper" />
-            <h3 className="value-title">{value.title}</h3>
-            <p className="value-description">{value.description}</p>
+            {/* <value.icon className="icon-wrapper-core-value" /> */}
+            <img src={value.icon} alt={`${value.title} icon`} className="icon-wrapper-core-value" />
+            <h3 className="value-title-core-value">{value.title}</h3>
+            <p className="value-description-core-value">{value.description}</p>
           </motion.div>
         ))}
       </div>

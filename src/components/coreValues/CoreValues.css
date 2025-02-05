@@ -41,19 +41,19 @@
     text-align: center;
   }
   
-  .icon-wrapper {
+  .icon-wrapper-core-value {
     width: 60px;
     height: 60px;
     margin-bottom: 1rem;
   }
   
-  .value-title {
+  .value-title-core-value {
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
   
-  .value-description {
+  .value-description-core-value {
     font-size: 1rem;
     color: #555;
   }
