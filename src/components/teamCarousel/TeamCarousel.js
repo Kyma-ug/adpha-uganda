@@ -8,7 +8,7 @@ import "./TeamCarousel.css";
 
 import quotesIcon from "./quotation.svg";
 import AdphaChairman from "./CHAIRPERSON_ADPHA_BOARD.avif";
-import alex from "./Alex.avif";
+import alex from "./ALEX.avif";
 import allenah from "./Allenah.avif";
 import mpagi from "./mpagi.avif";
 import caro from './Caro.avif';
@@ -28,7 +28,7 @@ import olivia from './olivia.avif';
 
 const teamMembers = [
   {  name: "DICK BUGEMBE", title: "Chairman Board ADPHA", image: AdphaChairman, message: "Dick Bugembe joined ADPHA-UGANDA with the vision and drive to improve the Non-Governmental Organization and make its name synonymous with social change and human betterment. He has focused on developing the organization with great integrity." },
-  {  name: "WINNIE NAKAYIBA", title: "Chairman Board ADPHA", image: vice, message: "A well-respected member of the ADPHA-UGANDA team and has played a vital role in shaping our vision and programs." },
+  {  name: "WINNIE NAKAYIBA", title: "Vice Chairperson of the Board", image: vice, message: "A well-respected member of the ADPHA-UGANDA team and has played a vital role in shaping our vision and programs." },
   {  name: "CATE WANYANA NALONGO", title: "Treasurer of the Board", image: treasurer, message: "With us since our founding, Cate is one of our veteran team members who has seen ADPHA-UGANDA grow and make a measurable impact." },
   {  name: "REHEMA NABBANJA", title: "Member of the Board", image: secretary, message: "A well-respected member of the ADPHA-UGANDA team, who has played a vital role in shaping our vision and programs, in making ADPHA-UGANDA a household name." },
   { name: "JAMES MPAGI", title: "Member of the Board", image: mpagi, message: "A well-respected member of the ADPHA-UGANDA team, who has played a vital role in shaping our vision and programs, in making ADPHA-UGANDA a household name." },

@@ -1,9 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Carousels.css'; 
+import './Carousels.css';
+
+
 
 const Carousels = ({ partners }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const carouselRef = useRef(null);
+    const isMobile = window.innerWidth <= 768; // Check if the screen is mobile
+    const itemsPerPage = isMobile ? 3 : 6; // Show 3 items on mobile, 6 on desktop
+
+    // Duplicate partners array to create infinite scroll effect
+    const duplicatedPartners = [...partners, ...partners];
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -15,12 +22,24 @@ const Carousels = ({ partners }) => {
 
     useEffect(() => {
         if (carouselRef.current) {
+            const itemWidth = carouselRef.current.offsetWidth / itemsPerPage;
             carouselRef.current.scrollTo({
-                left: currentIndex * carouselRef.current.offsetWidth,
+                left: currentIndex * itemWidth,
                 behavior: 'smooth',
             });
+
+            // Reset to the start of the duplicated array when reaching the end
+            if (currentIndex === partners.length) {
+                setTimeout(() => {
+                    carouselRef.current.scrollTo({
+                        left: 0,
+                        behavior: 'auto', // No smooth transition for reset
+                    });
+                    setCurrentIndex(0);
+                }, 500); // Wait for the smooth scroll to finish
+            }
         }
-    }, [currentIndex]);
+    }, [currentIndex, partners.length, itemsPerPage]);
 
     const handleDotClick = (index) => {
         setCurrentIndex(index);
@@ -29,14 +48,14 @@ const Carousels = ({ partners }) => {
     return (
         <div className="carousel-container">
             <div className="carousel" ref={carouselRef}>
-                {partners.map((partner, index) => (
+                {duplicatedPartners.map((partner, index) => (
                     <a
-                        key={partner.id}
+                        key={`${partner.id}-${index}`} // Unique key for duplicated items
                         href={partner.website}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="carousel-item"
-                        style={{ minWidth: '170px' }} // Ensure a minimum width for each item
+                        style={{ minWidth: `calc(100% / ${itemsPerPage})` }} // Responsive width
                     >
                         <img src={partner.logo} alt={partner.name} />
                     </a>

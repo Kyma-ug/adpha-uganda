@@ -1,6 +1,5 @@
-/* Carousel.css */
 .carousel-container {
-    width: 80%; /* Covers 80% of the screen */
+    width: 90%; /* Covers 90% of the screen */
     margin: 20px auto; /* Centers the carousel */
     overflow: hidden; /* Hide scrollbar and overflowing content */
     position: relative; /* Needed for absolute positioning of dots */
@@ -21,8 +20,6 @@
 }
 
 .carousel-item {
-    width: 170;
-    height: 200;
     flex: 0 0 auto; /* Prevent items from shrinking or growing */
     scroll-snap-align: start; /* Snap to the start of each item */
     display: flex;
@@ -37,7 +34,6 @@
     max-height: 200px; /* Set a maximum height for the logos */
     display: block; /* Prevents a small gap below image */
 }
-
 
 .carousel-dots {
     display: flex;
@@ -59,12 +55,8 @@
     background-color: #002c4b; /* Your primary blue color */
 }
 
-@media (min-width: 768px) { 
-    .carousel-container {
-        width: 90%;
-    }
+@media (max-width: 768px) {
     .carousel-item {
-        min-width: 90px;
-
+        min-width: calc(100% / 3); /* Show 3 items on mobile */
     }
-  }
+}

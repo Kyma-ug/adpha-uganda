@@ -47,7 +47,7 @@ const Home = () => {
         
         <MakingADifference />
         <StatisticsSection />
-        {/* <PartnersCarousel /> */}
+        
         <Carousels partners={partners} />
         <ResourceCenter />
     </div>
