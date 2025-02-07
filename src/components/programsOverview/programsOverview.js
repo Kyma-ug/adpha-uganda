@@ -65,7 +65,7 @@ const ProgramsOverview = () => {
 
   return (
     <section className="programs-component-overview" aria-labelledby="programs-heading">
-      <h2 id="programs-heading-overview">Our Programs</h2>
+      {/* <h2 id="programs-heading-overview">Our Programs</h2> */}
       <div className="programs-list-overview">
         {programsData.map((program, index) => (
           <motion.div

@@ -25,11 +25,11 @@
   gap: 2rem;
 }
 
-.program-item-overview .left-image {
+.program-item-overview.left-image {
   flex-direction: row;
 }
 
-.program-item-overview .right-image {
+.program-item-overview.right-image {
   flex-direction: row-reverse;
 }
 
@@ -41,7 +41,7 @@
   width: 100%;
   height: 445px;
   object-fit: cover;
-  /* border-radius: 8px; */
+  
   
 }
 
