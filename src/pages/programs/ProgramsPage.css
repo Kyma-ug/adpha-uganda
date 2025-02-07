@@ -4,18 +4,43 @@
     color: #333;
   }
   
+
+
+
+
+
+
+
+
+
+.hero-content-about {
+  width: 100%;
+  
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 1rem; */
+  z-index: 10;
+}
+
+
+
+
+
+
+
+
+
   /* Hero Section */
   .hero-section-programs {
-    height: 400px;
-    background-image: url('./hiv-tb-advocacy-uganda.avif');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    height: 400px; 
     position: relative;
+    background: url('./hiv-tb-advocacy.avif') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem;
   }
   
   .hero-overlay-programs {
@@ -28,14 +53,29 @@
   }
   
   .hero-content-programs {
-    position: relative;
-    z-index: 2;
+    width: 100%;
+  
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    z-index: 10;
   }
   
   .hero-content-programs h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3rem; 
+    font-weight: 700;
+    color: #fff; 
+    margin-bottom: 0.5rem;
   }
+
+  .hero-dash-programs {
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #0073e6, #00a8ff); 
+    margin-bottom: 1.5rem;
+  }
+  
   
   .hero-content-programs p {
     font-size: 1.2rem;

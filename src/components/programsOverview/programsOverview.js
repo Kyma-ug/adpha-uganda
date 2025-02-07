@@ -88,7 +88,7 @@ const ProgramsOverview = () => {
               <h3>{program.title}</h3>
               <motion.div
                 className="title-dash-overview"
-                initial={{ scaleX: 0 }}
+                initial={{ scaleX: 0, originX: '0%' }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}

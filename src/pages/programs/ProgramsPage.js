@@ -115,15 +115,23 @@ const ProgramsPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
+                
           >
             Our Programs
           </motion.h1>
+          <div 
+          className="hero-dash-programs" 
+          aria-hidden="true"
+          initial={{ scaleX: 0, originX: '0%' }} 
+          whileInView={{ scaleX: 1 }} 
+          transition={{ duration: 0.5 }}
+          ></div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Empowering lives through inclusive and impactful initiatives.
+            {/* Empowering lives through inclusive and impactful initiatives. */}
           </motion.p>
         </div>
       </section>
