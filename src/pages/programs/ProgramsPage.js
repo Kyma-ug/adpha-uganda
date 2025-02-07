@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './ProgramsPage.css';
+import ProgramsOverview from '../../components/programsOverview/programsOverview';
 
 
 
@@ -104,28 +105,12 @@ const programsData = [
 
 
 const ProgramsPage = () => {
-
-
-    const [activeProgram, setActiveProgram] = useState(null);
-
-    const toggleProgramDetails = (index) => {
-    if (activeProgram === index) {
-        setActiveProgram(null); // Close if already open
-    } else {
-        setActiveProgram(index); // Open if closed or different program open
-    }
-    };
-
-
-
-
-
   return (
     <div className="programs-page">
       {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
+      <section className="hero-section-programs">
+        <div className="hero-overlay-programs"></div>
+        <div className="hero-content-programs">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -143,33 +128,15 @@ const ProgramsPage = () => {
         </div>
       </section>
 
-      {/* Programs Overview */}
-      <section className="programs-overview">
-        <h2>Explore Our Programs</h2>
-        <div className="programs-grid">
-          {programsData.map((program, index) => (
-            <div key={index} className="program-card">
-              <img src={program.image} alt={program.title} />
-              <h3>{program.title}</h3>
-              <p>{program.description}</p>
-              <button onClick={() => toggleProgramDetails(index)}>Learn More</button>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      {/* Program Details */}
-      <section className="program-details">
-        {programsData.map((program, index) => (
-          <div key={index} className={`program-detail ${activeProgram === index ? 'active' : ''}`}>
-            <h3>{program.title}</h3>
-            <p>{program.details}</p>
-          </div>
-        ))}
-      </section>
+      <ProgramsOverview />
+
+      
+    
+      
 
       {/* Success Stories */}
-      <section className="success-stories">
+      {/* <section className="success-stories">
         <h2>Success Stories</h2>
         <div className="stories-grid">
           {successStories.map((story, index) => (
@@ -180,10 +147,10 @@ const ProgramsPage = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
-      <section className="testimonials">
+      {/* <section className="testimonials">
         <h2>What People Say</h2>
         <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
@@ -193,13 +160,13 @@ const ProgramsPage = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
-      <section className="cta-section">
+      <section className="cta-section-programs">
         <h2>Join Us in Making a Difference</h2>
         <p>Your support can change lives. Get involved today!</p>
-        <div className="cta-buttons">
+        <div className="cta-buttons-programs">
           <button>Donate Now</button>
           <button>Volunteer</button>
           <button>Partner With Us</button>
@@ -217,7 +184,7 @@ const ProgramsPage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
+      {/* <footer className="footer">
         <div className="footer-links">
           <a href="/about">About Us</a>
           <a href="/contact">Contact</a>
@@ -228,9 +195,9 @@ const ProgramsPage = () => {
           <a href="https://twitter.com">Twitter</a>
           <a href="https://instagram.com">Instagram</a>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };
 
-export default ProgramsPage;
+export default ProgramsPage

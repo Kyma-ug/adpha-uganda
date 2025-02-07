@@ -109,7 +109,7 @@ function Navbar() {
                   
         <a href="/" className="navbar-logo-container" onClick={() => navigate("/")}>
             <div className="adpha-navbar-logo">
-                <img src={adphalogo} alt="Inclusive Advocacy" />
+                <img src={adphalogo} alt="Association of Persons with Disabilities Living with HIV (ADPHA) Uganda" />
             </div>
             {/* <div className="adpha-logo-text">
                 <strong>ADPHA Uganda</strong>
@@ -145,7 +145,7 @@ function Navbar() {
                 className={`nav-item ${activeLink === "programs" ? "active" : ""}`}
                 onClick={() => handleLinkClick("programs")}
                 >
-                  <Link to={"/getinvolved"}>
+                  <Link to={"/programs"}>
                     Programs
                   </Link>
                 </li>
