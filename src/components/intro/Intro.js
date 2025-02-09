@@ -11,28 +11,28 @@ const Intro = () => {
 
 
   return (
-    <section className="intro-section">
-      <div className="intro-container">
+    <section className="intro-section-home">
+      <div className="intro-container-home">
         {/* Text Column */}
         <motion.div
-          className="intro-text"
+          className="intro-text-home"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="intro-title">Transforming Lives, Empowering Futures</h1>
-          <p className="intro-description">
+          <h1 className="intro-title-home">Transforming Lives, Empowering Futures</h1>
+          <p className="intro-description-home">
           Empowering Persons with Disabilities to live with dignity and equality, championing their rights, and creating inclusive communities.
           </p>
-          <div className="button-group">
-            <button className="intro-cta primary">Donate Now</button>
-            <button className="intro-cta secondary" onClick={() => navigate("/about")}>Learn More</button>
+          <div className="button-group-home">
+            <button className="intro-cta-home primary-home">Donate Now</button>
+            <button className="intro-cta-home secondary-home" onClick={() => navigate("/about")}>Learn More</button>
           </div>
         </motion.div>
 
         {/* Image Column */}
         <motion.div
-          className="intro-image"
+          className="intro-image-home"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -40,7 +40,7 @@ const Intro = () => {
           <img
             src={adphaimage}
             alt="Empowering futures"
-            className="image"
+            className="image-home"
           />
         </motion.div>
       </div>

@@ -1,13 +1,15 @@
 /* Intro Section Styles */
-.intro-section {
-  padding: 6rem 2rem;
-  background-color: #f5f5f5;
+.intro-section-home {
+  padding: 3.5rem 2rem;
+  /* background-color: #f5f5f5; */
+  background-color: #f2fbfd;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.intro-container {
+.intro-container-home {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -16,31 +18,31 @@
   align-items: center;
 }
 
-.intro-text {
+.intro-text-home {
   flex: 1;
   padding: 1rem;
 }
 
-.intro-title {
+.intro-title-home {
   font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
   color: #002f6c;
 }
 
-.intro-description {
+.intro-description-home {
   font-size: 1.25rem;
   line-height: 1.6;
   color: #555;
   margin-bottom: 2rem;
 }
 
-.button-group {
+.button-group-home {
   display: flex;
   gap: 1rem;
 }
 
-.intro-cta {
+.intro-cta-home {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border-radius: 5px;
@@ -49,36 +51,36 @@
   text-transform: uppercase;
 }
 
-.intro-cta.primary {
+.intro-cta-home.primary-home {
   color: #fff;
   /* background-color: #0072ce; */
   background-color: #007bff;
   border: none;
 }
 
-.intro-cta.primary:hover {
+.intro-cta-home.primary-home:hover {
   background-color: #005bb5;
 }
 
-.intro-cta.secondary {
+.intro-cta-home.secondary-home {
   color: #0072ce;
   background-color: #fff;
   border: 2px solid #0072ce;
 }
 
-.intro-cta.secondary:hover {
+.intro-cta-home.secondary-home:hover {
   background-color: #0072ce;
   color: #fff;
 }
 
-.intro-image {
+.intro-image-home {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.intro-image .image {
+.intro-image-home .image-home {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
@@ -87,16 +89,16 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .intro-container {
+  .intro-container-home {
     flex-direction: column;
     text-align: center;
   }
 
-  .intro-image {
+  .intro-image-home {
     margin-top: 1rem;
   }
 
-  .intro-text {
+  .intro-text-home {
     padding: 0;
   }
 }
