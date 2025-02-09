@@ -1,15 +1,54 @@
 
+.what-we-do {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
+
+  .what-we-do-title {
+    font-size: 2rem; 
+    font-weight: 700;
+     
+    color: #002c4b;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    
+  }
+  .what-we-do-title-dash {
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #0073e6, #00a8ff); 
+    margin-bottom: 1.5rem;
+    
+  }
+  
+  .what-we-do-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333; /* Slightly lighter color for readability */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 0.6s forwards; /* Delay for text */
+  }
+
+
+
+
+
+
+
 .programs-component-overview {
-  padding: 4rem 2rem;
+  /* padding: 4rem 2rem; */
   background: #f9f9f9;
   text-align: center;
 }
 
-.programs-component-overview h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #002c4b;
-}
 
 /* Programs List */
 .programs-list-overview {

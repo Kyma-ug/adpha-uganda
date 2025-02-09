@@ -20,6 +20,7 @@ import drf from './img-09.png';
 import nerve from './img-10.png';
 import frontline from './img-11.png';
 import ResourceCenter from '../../components/resourcecenter/ResourceCenter';
+import CarouselHomeHero from '../../components/carouselHomeHero/CarouselHomeHero';
 
 
 const partners = [
@@ -42,7 +43,8 @@ const Home = () => {
   return (
     <div>
 
-        <Hero />
+        {/* <Hero /> */}
+        <CarouselHomeHero />
         <Intro />
         
         <MakingADifference />

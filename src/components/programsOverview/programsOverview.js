@@ -65,7 +65,44 @@ const ProgramsOverview = () => {
 
   return (
     <section className="programs-component-overview" aria-labelledby="programs-heading">
-      {/* <h2 id="programs-heading-overview">Our Programs</h2> */}
+       
+      <section className="what-we-do">
+      <motion.h2 
+        id="what-we-do-title" 
+        className="what-we-do-title"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        >
+          What We Do
+        </motion.h2>
+        <motion.div 
+        className="what-we-do-title-dash" 
+        aria-hidden="true"
+        initial={{  width: 0 , originX: '0%' }}
+        whileInView={{ width: "100px" }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        ></motion.div>
+        <p className="what-we-do-text">
+          ADPHA Uganda is an association of Persons with Disabilities living with HIV or affected by TB ; which advocates and Networks for inclusive health and support services; to enable people with disabilities living with HIV or TB survivors generate meaningful healthy and productive lives in Uganda . <br/>For successful implementation of the ADPHA Uganda strategic Interventions  attention should be paid to the following factors
+        </p>
+      </section>
+
+
+           
+        
+        
+
+
+
+
+
+
+
+
+
+
+
       <div className="programs-list-overview">
         {programsData.map((program, index) => (
           <motion.div

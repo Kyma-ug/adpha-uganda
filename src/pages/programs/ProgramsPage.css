@@ -6,30 +6,6 @@
   
 
 
-
-
-
-
-
-
-
-.hero-content-about {
-  width: 100%;
-  
-  max-width: 1200px;
-  margin: 0 auto;
-  /* padding: 0 1rem; */
-  z-index: 10;
-}
-
-
-
-
-
-
-
-
-
   /* Hero Section */
   .hero-section-programs {
     height: 400px; 
@@ -213,3 +189,9 @@
   }
   
  
+  @media (max-width: 768px) {
+    .hero-content-programs h1 {
+    font-size: 2.5rem; 
+  }
+
+}
