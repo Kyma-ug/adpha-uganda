@@ -2,8 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import '@fortawesome/fontawesome-free/js/all.js';
 
 
-
 import './StatisticsSection.css';
+import partnership from './partnership.svg';
+import ugandacoverage from './uganda-coverage.svg';
+import yearsofservice from './years-of-service.svg';
+import peoplereached from './vulnerable-people-reached.svg';
+import programsdelivered from './disability-programs-delivered.svg';
+
 
 const StatisticsSection = () => {
   const countersRef = useRef([]);
@@ -54,59 +59,50 @@ const StatisticsSection = () => {
     {
       target: 15000,
       label: "People Reached",
-      icon: "fa-solid fa-users", // Font Awesome class
+      icon: peoplereached, 
     },
     {
       target: 32,
       label: "Programs Delivered",
-      icon: "fa-solid fa-hand-holding-heart",
+      icon: programsdelivered,
     },
     {
-      target: 5,
+      target: 10,
       label: "Districts Covered",
-      icon: "fa-solid fa-map-marked-alt",
+      icon: ugandacoverage,
     },
     {
       target: 52,
       label: "Partners Engaged",
-      icon: "fa-solid fa-handshake",
+      icon: partnership,
     },
     {
       target: 9,
       label: "Years of Service",
-      icon: "fa-solid fa-clock",
+      icon: yearsofservice,
     },
   ];
 
   return (
-    <section
-      id="statistics-section"
-      className="statistics-section bg-fixed bg-cover"
-    >
-      <div className="container mx-auto py-12">
-        <h2 className="text-center text-3xl font-bold mb-8">Our Impact</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+    <section id="statistics-section" className="statistics-section">
+      <div className="statistics-container">
+        <h2 className="statistics-title">Our Impact</h2>
+        <div className="statistics-grid">
           {statistics.map((stat, index) => (
-            <div
-              key={index}
-              className="stat-card text-center p-6 rounded-lg bg-white shadow-md"
-            >
-              {/* Icon */}
-              <div className="text-blue-600 text-4xl mb-4">
-                <i className={stat.icon}></i>
+            <div key={index} className="stat-card">
+              <div className="stat-icon">
+                {/* Render your custom SVG icon here */}
+                <img src={stat.icon} alt={`${stat.title} icon`} className="icon-wrapper-stats" />
+                {/* {stat.icon} */}
               </div>
-
-              {/* Counter */}
               <h3
                 ref={(el) => (countersRef.current[index] = el)}
                 data-target={stat.target}
-                className="counter text-4xl font-extrabold text-blue-600"
+                className="stat-value counter"
               >
                 0
               </h3>
-
-              {/* Label */}
-              <p className="mt-2 text-lg">{stat.label}</p>
+              <p className="stat-label">{stat.label}</p>
             </div>
           ))}
         </div>
