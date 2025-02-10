@@ -33,7 +33,8 @@
     width: 70px;
     height: 4px;
     border-radius: 2px;
-    background: linear-gradient(90deg, #0073e6, #00a8ff); 
+    /* background: linear-gradient(90deg, #0073e6, #00a8ff);  */
+    background: linear-gradient(90deg, #ff4757, #ff4041);
     margin-bottom: 2rem;
     /* transform-origin: left; 
     transform: scaleX(0); 
@@ -65,7 +66,8 @@
     left: 0;
     width: 6px; 
     height: 100%;
-    background-color: #ff4757; 
+    /* background-color: #ff4757;  */
+    background: linear-gradient(180deg, #ff4757, #ff4041);
   }
   
   .mission-card::after {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion";
 import './MissionVision.css'; 
 
 const MissionVision = () => {
@@ -10,8 +11,33 @@ const MissionVision = () => {
         <div className="mission-vision-cards">
           <div className="mission-card">
             <div className="card-content-mission-vision">
-              <h3 className="card-title-mission-vision">Our Mission</h3>
-              <div className="our-mission-dash" aria-hidden="true"></div>
+              <motion.h3 
+                className="card-title-mission-vision"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                Our Mission
+              </motion.h3>
+              <motion.div
+                className="our-mission-dash"
+                aria-hidden="true"
+                initial={{ width: 0, originX: "50%" }} 
+                whileInView={{ width: "70px", originX: "50%" }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                variants={{
+                  mobile: {
+                    initial: { width: 0, originX: "50%" },
+                    whileInView: { width: "70px", originX: "50%" },
+                  },
+                  desktop: {
+                    initial: { width: 0, originX: "0%" },
+                    whileInView: { width: "70px", originX: "0%" },
+                  },
+                }}
+                custom={window.innerWidth} 
+              >
+              </motion.div>
               <p className="card-text-mission-vision">
                 Eliminate barriers in service delivery and drivers of HIV/AIDS, TB and other infectious diseases among persons with disabilities.
               </p>
@@ -20,7 +46,26 @@ const MissionVision = () => {
           <div className="vision-card">
             <div className="card-content-mission-vision">
               <h3 className="card-title-mission-vision">Our Vision</h3>
-              <div className="our-mission-dash" aria-hidden="true"></div>
+              <motion.div
+                className="our-mission-dash"
+                aria-hidden="true"
+                initial={{ width: 0, originX: "50%" }} 
+                whileInView={{ width: "70px", originX: "50%" }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                variants={{
+                  mobile: {
+                    initial: { width: 0, originX: "50%" },
+                    whileInView: { width: "70px", originX: "50%" },
+                  },
+                  desktop: {
+                    initial: { width: 0, originX: "0%" },
+                    whileInView: { width: "70px", originX: "0%" },
+                  },
+                }}
+                custom={window.innerWidth} 
+              >
+              </motion.div>
+
               <p className="card-text-mission-vision">
                 A society where all Persons with Disabilities living with and affected by HIV & AIDS, TB, and other infectious diseases realize their rights without discrimination.
               </p>

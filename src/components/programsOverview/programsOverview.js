@@ -125,9 +125,21 @@ const ProgramsOverview = () => {
               <h3>{program.title}</h3>
               <motion.div
                 className="title-dash-overview"
-                initial={{ scaleX: 0, originX: '0%' }}
-                whileInView={{ scaleX: 1 }}
+                aria-hidden="true"
+                initial={{ width: 0, originX: "50%" }} 
+                whileInView={{ width: "100px", originX: "50%" }}
                 transition={{ duration: 0.8, delay: 0.3 }}
+                variants={{
+                  mobile: {
+                    initial: { width: 0, originX: "50%" },
+                    whileInView: { width: "100px", originX: "50%" },
+                  },
+                  desktop: {
+                    initial: { width: 0, originX: "0%" },
+                    whileInView: { width: "100px", originX: "0%" },
+                  },
+                }}
+                custom={window.innerWidth} 
                 viewport={{ once: true }}
               />
               <p>{program.description}</p>

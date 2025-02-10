@@ -19,10 +19,11 @@
     
   }
   .what-we-do-title-dash {
-    width: 100px;
+    /* width: 100px; */
     height: 4px;
     border-radius: 2px;
-    background: linear-gradient(90deg, #ff4757, #ff6b81);
+    /* background: linear-gradient(90deg, #ff4757, #ff6b81); */
+    background: linear-gradient(90deg, #ff4757, #ff4041);
     margin-bottom: 1.5rem;
     
   }
@@ -106,7 +107,7 @@
   width: 100px;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #ff4757, #ff6b81);
+  background: linear-gradient(90deg, #ff4757, #ff4041);
   margin-bottom: 1.5rem;
 }
 
@@ -136,7 +137,8 @@
   width: 90px;
   height: 2.5px;
   border-radius: 1.25px;
-  background: linear-gradient(90deg, #ff4757, #ff6b81);
+  /* background: linear-gradient(90deg, #ff4757, #ff6b81); */
+  background: linear-gradient(90deg, #ff4757, #ff4041);
   margin-top: 0.5rem;
 }
 
