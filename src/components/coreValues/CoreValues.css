@@ -10,13 +10,14 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: #002f6c;
   }
   
   .title-dash-core {
     height: 4px;
     border-radius: 2px;
     /* background: red; */
-    background: linear-gradient(90deg, #007bff, #0056b3);
+    background: linear-gradient(90deg, #ff4757, #ff6b81);
     margin: auto;
     width: 100px;
     transform-origin: left;

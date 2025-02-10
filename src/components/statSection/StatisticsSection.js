@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import '@fortawesome/fontawesome-free/js/all.js';
+
 
 
 import './StatisticsSection.css';
@@ -71,11 +71,11 @@ const StatisticsSection = () => {
       label: "Districts Covered",
       icon: ugandacoverage,
     },
-    {
-      target: 52,
-      label: "Partners Engaged",
-      icon: partnership,
-    },
+    // {
+    //   target: 52,
+    //   label: "Partners Engaged",
+    //   icon: partnership,
+    // },
     {
       target: 9,
       label: "Years of Service",
@@ -86,14 +86,37 @@ const StatisticsSection = () => {
   return (
     <section id="statistics-section" className="statistics-section">
       <div className="statistics-container">
+
+
+      <motion.h2
+        className="our-impact-home-title"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        // viewport={{ once: true }}
+      >
+        Our Impact
+      </motion.h2>
+
+      <motion.div
+        className="our-impact-home-dash"
+        initial={{  width: 0  }}
+        whileInView={{ width: "100px" }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      />
+
+
+
+
+
         <h2 className="statistics-title">Our Impact</h2>
         <div className="statistics-grid">
           {statistics.map((stat, index) => (
             <div key={index} className="stat-card">
               <div className="stat-icon">
-                {/* Render your custom SVG icon here */}
+                
                 <img src={stat.icon} alt={`${stat.title} icon`} className="icon-wrapper-stats" />
-                {/* {stat.icon} */}
+                
               </div>
               <h3
                 ref={(el) => (countersRef.current[index] = el)}

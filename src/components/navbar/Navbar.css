@@ -11,7 +11,7 @@
 
 .navbar {
   position: relative;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -79,7 +79,8 @@
   position: relative;
   font-size: 17px;
   font-weight: 600;
-  color: #333;
+  /* color: #333; */
+  color: #002f6c;
   text-transform: uppercase;
 }
 
@@ -153,7 +154,8 @@
   top: 100%;
   width: 200px;
   
-  color: #333;
+  /* color: #333; */
+  color: #002f6c;
   background-color: #ffffff;
   /* transition: transform 0.3s ease-in-out; */
 
@@ -200,10 +202,12 @@
 
 
 
+
 /* Dropdown Items */
 .dropdown-item {
   position: relative;
-  color: #333;
+  /* color: #333; */
+  color: #002f6c;
   padding: 0.5rem 0;
   gap: 0.5rem;
 
@@ -377,7 +381,8 @@
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
-  color: #333;
+  /* color: #333; */
+  color: #002f6c;
   transition: color 0.3s ease;
 }
 

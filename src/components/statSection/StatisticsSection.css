@@ -1,6 +1,6 @@
 
 .statistics-section {
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   color: #fff;
   text-align: center;
   background: url('./adpha-3.jpg') no-repeat center center;
@@ -14,25 +14,35 @@
   margin: 0 auto;
 }
 
-.statistics-title {
-  font-size: 2.5rem;
+.our-impact-home-title {
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 3rem;
-  color: #f8f8f8;
+  margin-bottom: 1rem;
+  color: #002f6c;
 }
+
+.our-impact-home-dash {
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  margin: auto;
+  width: 100px;
+  transform-origin: left;
+}
+
 
 .statistics-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center the grid */
+  justify-content: center; 
   gap: 2rem;
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.8); /* White with transparency */
+  background: rgba(255, 255, 255, 0.8); 
   border-radius: 12px;
   padding: 2rem;
-  width: 250px; /* Adjusted width */
+  width: 250px; 
   text-align: center;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -51,17 +61,10 @@
   bottom: 0;
   width: 100%;
   height: 8px;
-  background: linear-gradient(to right, #e74c3c, #c0392b);
+  background: linear-gradient(90deg, #ff4757, #ff6b81);
   border-radius: 0 0 12px 12px;
 }
 
-.stat-icon {
-  font-size: 3rem;
-  color: #3498db; /* Blue icon color */
-  margin-bottom: 1rem;
-  display: flex; /* Ensure SVG centers correctly */
-  justify-content: center;
-}
 
 .icon-wrapper-stats {
   width: 60px;
@@ -72,7 +75,7 @@
 .stat-value {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #002f6c;
   margin-bottom: 1rem;
 }
 
@@ -88,7 +91,7 @@
   }
 
   .stat-card {
-    width: calc(50% - 2rem); /* 2 columns with spacing */
+    width: calc(50% - 1.2rem); 
     margin-bottom: 2rem;
   }
 }
