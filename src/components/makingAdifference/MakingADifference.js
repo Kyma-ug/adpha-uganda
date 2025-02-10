@@ -48,24 +48,24 @@ const MakingADifference = () => {
 
   return (
     <section className="difference-section">
-      <div className="container">
-        <h2 className="section-title">How We’re Making a Difference</h2>
-        <div className={`difference-grid ${isVisible ? 'visible' : ''}`}>
+      <div className="container-making-a-difference">
+        <h2 className="section-title-making-a-difference">How We’re Making a Difference</h2>
+        <div className={`difference-grid ${isVisible ? 'visible-making-a-difference' : ''}`}>
           {differenceData.map((item, index) => (
             <div className="difference-card" key={index}>
-              <div className="image-wrapper">
-                <img src={item.image} alt={item.title} className="card-image" />
+              <div className="image-wrapper-making-a-difference">
+                <img src={item.image} alt={item.title} className="card-image-making-a-difference" />
               </div>
-              <div className="icon-wrapper">
+              <div className="icon-wrapper-making-a-difference">
 
                 <i className={`fa ${item.icon}`}></i>
                 
                 {/* <i className="fa fa-globe"></i> */}
               </div>
-              <div className="card-content">
-                <h3 className="card-title">{item.title}</h3>
-                <p className="card-description">{item.description}</p>
-                <a href={item.link} className="learn-more-btn">
+              <div className="card-content-making-a-difference">
+                <h3 className="card-title-making-a-difference">{item.title}</h3>
+                <p className="card-description-making-a-difference">{item.description}</p>
+                <a href={item.link} className="learn-more-btn-making-a-difference">
                   Learn More
                 </a>
               </div>

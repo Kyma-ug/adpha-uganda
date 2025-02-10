@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import { motion } from 'framer-motion';
 
 
 import './StatisticsSection.css';
-import partnership from './partnership.svg';
+// import partnership from './partnership.svg';
 import ugandacoverage from './uganda-coverage.svg';
 import yearsofservice from './years-of-service.svg';
 import peoplereached from './vulnerable-people-reached.svg';
@@ -109,7 +109,7 @@ const StatisticsSection = () => {
 
 
 
-        <h2 className="statistics-title">Our Impact</h2>
+        {/* <h2 className="statistics-title">Our Impact</h2> */}
         <div className="statistics-grid">
           {statistics.map((stat, index) => (
             <div key={index} className="stat-card">
