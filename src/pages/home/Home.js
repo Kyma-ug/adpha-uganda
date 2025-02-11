@@ -21,6 +21,8 @@ import dfhug from './img-08.png';
 import drf from './img-09.png';
 import nerve from './img-10.png';
 import frontline from './img-11.png';
+import agilityfund from './agility-fund.png';
+import stoptbpartnership from './stop-tb-partnership-by-unops.png';
 import ResourceCenter from '../../components/resourcecenter/ResourceCenter';
 import CarouselHomeHero from '../../components/carouselHomeHero/CarouselHomeHero';
 import ResourceCenterHome from '../../components/resourceCenterHome/ResourceCenterHome';
@@ -28,10 +30,10 @@ import ResourceCenterHome from '../../components/resourceCenterHome/ResourceCent
 
 const partners = [
   { id: 1, name: 'ADD International', logo: addlogo, website: 'https://add.org.uk/madipha/' },
-  { id: 2, name: 'The Stop TB Partnership', logo: stoptbpart, website: 'https://www.stoptb.org/' },
+  { id: 2, name: 'The Stop TB Partnership', logo: stoptbpartnership, website: 'https://www.stoptb.org/' },
   { id: 3, name: 'Amplify Change', logo: amplify, website: 'https://amplifychange.org/' },
   { id: 4, name: 'The Disability Rights Fund', logo: drf, website: 'https://www.disabilityrightsfund.org/' },
-  // { id: 5, name: 'Partner 10', logo: stoptb, website: 'https://ustp.org.ug/' },
+  { id: 5, name: 'PVA Agility Fund', logo: agilityfund, website: 'https://peoplesmedicines.org/resources/agility-fund/' },
   { id: 6, name: 'Frontline AIDS', logo: frontline, website: 'https://frontlineaids.org/' },
   { id: 7, name: 'Treatment Action Group', logo: tag, website: 'https://www.treatmentactiongroup.org/' },
   { id: 8, name: 'DHF Uganda', logo: dfhug, website: 'https://x.com/DhfUganda' },

@@ -70,20 +70,27 @@ const Carousels = ({ partners }) => {
                 viewport={{ once: true }}
 
             />
-            <div className="carousel" ref={carouselRef}>
+            <motion.div 
+                className="carousel" 
+                ref={carouselRef}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
                 {duplicatedPartners.map((partner, index) => (
                     <a
-                        key={`${partner.id}-${index}`} // Unique key for duplicated items
+                        key={`${partner.id}-${index}`} 
                         href={partner.website}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="carousel-item"
-                        style={{ minWidth: `calc(100% / ${itemsPerPage})` }} // Responsive width
+                        style={{ minWidth: `calc(100% / ${itemsPerPage})` }} 
                     >
                         <img src={partner.logo} alt={partner.name} />
                     </a>
                 ))}
-            </div>
+            </motion.div>
             <div className="carousel-dots">
                 {partners.map((_, index) => (
                     <div
