@@ -9,17 +9,18 @@
     
 }
 
-
 .section-title-partners {
     font-size: 2rem;
     font-weight: bold;
+    color: #002f6c;
     margin-bottom: 1rem;
   }
   
   .title-dash-partners {
     height: 4px;
     border-radius: 2px;
-    background: linear-gradient(90deg, #007bff, #0056b3);
+    /* background: linear-gradient(90deg, #007bff, #0056b3); */
+    background: linear-gradient(90deg, #ff4757, #ff4041);
     /* margin: auto; */
     margin-bottom: 1.5rem;
     width: 100px;
@@ -74,7 +75,7 @@
 }
 
 .carousel-dot.active {
-    background-color: #002c4b; /* Your primary blue color */
+    background: #ff4041;
 }
 
 @media (max-width: 768px) {

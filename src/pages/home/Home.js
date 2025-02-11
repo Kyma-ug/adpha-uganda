@@ -1,5 +1,7 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import './Home.css';
+
 import Hero from '../../components/hero/Hero';
 import Intro from '../../components/intro/Intro';
 import MakingADifference from '../../components/makingAdifference/MakingADifference';
@@ -21,6 +23,7 @@ import nerve from './img-10.png';
 import frontline from './img-11.png';
 import ResourceCenter from '../../components/resourcecenter/ResourceCenter';
 import CarouselHomeHero from '../../components/carouselHomeHero/CarouselHomeHero';
+import ResourceCenterHome from '../../components/resourceCenterHome/ResourceCenterHome';
 
 
 const partners = [
@@ -39,26 +42,36 @@ const partners = [
 ];
 
 
+
+
 const Home = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Adjust 768 as needed
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize); // Clean up
+  }, []);
+
   return (
     <div>
+      <CarouselHomeHero />
+      <Intro />
+      <MakingADifference />
+      <StatisticsSection />
+      <Carousels partners={partners} />
 
-        {/* <Hero /> */}
-        <CarouselHomeHero />
-        <Intro />
-        
-        <MakingADifference />
-        <StatisticsSection />
-        
-        <Carousels partners={partners} />
-        <ResourceCenter />
+      
+      {!isMobile && <ResourceCenter />}
+      {isMobile && <ResourceCenterHome />}
     </div>
-
-
-
   );
 };
 
-
-
 export default Home;
+
+
+

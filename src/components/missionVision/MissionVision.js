@@ -25,17 +25,17 @@ const MissionVision = () => {
                 initial={{ width: 0, originX: "50%" }} 
                 whileInView={{ width: "70px", originX: "50%" }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                variants={{
-                  mobile: {
-                    initial: { width: 0, originX: "50%" },
-                    whileInView: { width: "70px", originX: "50%" },
-                  },
-                  desktop: {
-                    initial: { width: 0, originX: "0%" },
-                    whileInView: { width: "70px", originX: "0%" },
-                  },
-                }}
-                custom={window.innerWidth} 
+                // variants={{
+                //   mobile: {
+                //     initial: { width: 0, originX: "50%" },
+                //     whileInView: { width: "70px", originX: "50%" },
+                //   },
+                //   desktop: {
+                //     initial: { width: 0, originX: "0%" },
+                //     whileInView: { width: "70px", originX: "0%" },
+                //   },
+                // }}
+                // custom={window.innerWidth} 
               >
               </motion.div>
               <p className="card-text-mission-vision">
@@ -45,24 +45,31 @@ const MissionVision = () => {
           </div>
           <div className="vision-card">
             <div className="card-content-mission-vision">
-              <h3 className="card-title-mission-vision">Our Vision</h3>
+              <motion.h3 
+                className="card-title-mission-vision"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                Our Vision
+              </motion.h3>
               <motion.div
                 className="our-mission-dash"
                 aria-hidden="true"
                 initial={{ width: 0, originX: "50%" }} 
                 whileInView={{ width: "70px", originX: "50%" }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                variants={{
-                  mobile: {
-                    initial: { width: 0, originX: "50%" },
-                    whileInView: { width: "70px", originX: "50%" },
-                  },
-                  desktop: {
-                    initial: { width: 0, originX: "0%" },
-                    whileInView: { width: "70px", originX: "0%" },
-                  },
-                }}
-                custom={window.innerWidth} 
+                // variants={{
+                //   mobile: {
+                //     initial: { width: 0, originX: "50%" },
+                //     whileInView: { width: "70px", originX: "50%" },
+                //   },
+                //   desktop: {
+                //     initial: { width: 0, originX: "0%" },
+                //     whileInView: { width: "70px", originX: "0%" },
+                //   },
+                // }}
+                // custom={window.innerWidth} 
               >
               </motion.div>
 

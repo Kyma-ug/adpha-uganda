@@ -103,7 +103,7 @@ const TeamCarousel = () => {
   return (
     <section className="team-carousel">
       <motion.h2
-        className="carousel-title"
+        className="carousel-title-team"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         // animate={{ opacity: 1, y: 0 }}
@@ -112,18 +112,18 @@ const TeamCarousel = () => {
         Meet Our Team
       </motion.h2>
       <motion.div
-        className="title-dash"
+        className="title-dash-team"
         initial={{  width: 0  }}
         whileInView={{ width: "100px" }}
         transition={{ duration: 0.8, delay: 0.3 }}
       />
 
-      <div className="carousel-container">
-        <div className="carousel-track" style={{ transform: `translateX(-${currentIndex * (cardWidth + 16)}px)` }}>
+      <div className="carousel-container-team">
+        <div className="carousel-track-team" style={{ transform: `translateX(-${currentIndex * (cardWidth + 16)}px)` }}>
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
-              className={`carousel-card ${activeCard === index ? "flipping" : ""}`}
+              className={`carousel-card-team ${activeCard === index ? "flipping-team" : ""}`}
               style={{ width: cardWidth }}
               onMouseEnter={() => handleCardHover(index)}
               onMouseLeave={handleCardLeave}
@@ -132,15 +132,15 @@ const TeamCarousel = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
             >
-              <div className="card-face card-front">
-                <div className="image-container-carousel">
+              <div className="card-face-team card-fron-team">
+                <div className="image-container-carousel-team">
                   <img src={member.image} alt={member.name} className="team-image" />
                 </div>
                 <motion.h3 className="team-name">{member.name}</motion.h3>
                 <motion.p className="team-title">{member.title}</motion.p>
               </div>
-              <div className="card-face card-back">
-                <img src={quotesIcon} alt="" className="quotes-bg" />
+              <div className="card-face-team card-back-team">
+                <img src={quotesIcon} alt="" className="quotes-bg-team" />
                 <motion.p
                   className="team-message"
                   initial={{ opacity: 0, y: 20 }}
@@ -154,17 +154,17 @@ const TeamCarousel = () => {
           ))}
         </div>
 
-        <div className="carousel-nav">
-          <FaChevronLeft className="carousel-icon prev" onClick={handlePrev} />
-          <FaChevronRight className="carousel-icon next" onClick={handleNext} />
+        <div className="carousel-nav-team">
+          <FaChevronLeft className="carousel-icon-team prev-team" onClick={handlePrev} />
+          <FaChevronRight className="carousel-icon-team next-team" onClick={handleNext} />
         </div>
       </div>
 
-      <div className="carousel-dots">
+      <div className="carousel-dots-team">
         {Array.from({ length: Math.ceil(teamMembers.length / cardsPerPage) }).map((_, index) => (
           <motion.div
             key={index}
-            className={`dot ${index === Math.floor(currentIndex / cardsPerPage) ? "active" : ""}`}
+            className={`dot-team ${index === Math.floor(currentIndex / cardsPerPage) ? "active-team" : ""}`}
             animate={{ scale: index === Math.floor(currentIndex / cardsPerPage) ? 1.3 : 1 }}
             transition={{ duration: 0.5 }}
           />

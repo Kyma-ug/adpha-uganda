@@ -28,7 +28,7 @@ const CoreValues = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        // viewport={{ once: true }}
+        viewport={{ once: true }}
       >
         Our Core Values
       </motion.h2>
@@ -38,6 +38,7 @@ const CoreValues = () => {
         initial={{  width: 0  }}
         whileInView={{ width: "100px" }}
         transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
       />
 
       <div className="values-grid">

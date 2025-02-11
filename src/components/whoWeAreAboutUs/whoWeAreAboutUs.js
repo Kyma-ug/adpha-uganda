@@ -15,6 +15,7 @@ const WhoWeAreAboutUs = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
         >
           Who We Are
         </motion.h2>
@@ -24,6 +25,7 @@ const WhoWeAreAboutUs = () => {
         initial={{  width: 0 , originX: '0%' }}
         whileInView={{ width: "100px" }}
         transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
         ></motion.div>
         <p className="who-we-are-text">
         The Association of Persons with Disabilities Living with HIV (ADPHA) Uganda is a beacon of hope and support for individuals with disabilities living with or affected by HIV and TB, and their families.  Starting in 2009 in the districts of Masaka, Kalungu, Lwengo, Bukomansimbi, and Rakai, we've grown to serve communities across Uganda.  As the first organized peer-support network of its kind in the country, ADPHA-Uganda champions the rights of people with disabilities within national HIV/AIDS and TB programs. <br/>

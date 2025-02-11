@@ -1,6 +1,6 @@
 
 .statistics-section {
-  padding: 2rem 2rem;
+  padding: 2rem 2rem 3rem 2rem;
   color: #fff;
   text-align: center;
   background: url('./adpha-3.jpg') no-repeat center center;
@@ -25,8 +25,7 @@
 .our-impact-home-dash {
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #007bff, #0056b3);
-  /* background: linear-gradient(90deg, #ff4757, #ff6b81); */
+  background: linear-gradient(90deg, #ff4757, #ff4041);
   margin: 0 auto 1.5rem  auto;
   width: 100px;
   transform-origin: left;
