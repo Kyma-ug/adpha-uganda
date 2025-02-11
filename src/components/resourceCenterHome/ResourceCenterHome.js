@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 import './ResourceCenterHome.css';
-
 
 import annualreport from './annual-report-2024.jpg';
 import accessibilityreport from './accessibilty-assesment-of-health-services.jpg';
@@ -49,7 +48,25 @@ const ResourceCenterHome = () => {
 
   return (
     <section className="resource-center" aria-labelledby="resource-center-heading">
-      <h2 id="resource-center-heading">Resource Center</h2>
+
+        <motion.h2
+            className="resource-section-title-mobile"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+        >
+                Resource Center
+        </motion.h2>
+
+        <motion.div
+            className="resource-title-dash-mobile"
+            initial={{  width: 0  }}
+            whileInView={{ width: "100px" }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+        />
+            
       <div className="resources-list">
         {resources.map((resource) => (
 

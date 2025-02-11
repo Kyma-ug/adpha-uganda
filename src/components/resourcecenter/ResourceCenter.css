@@ -11,6 +11,23 @@ body {
   padding: 2rem;
 }
 
+.resource-section-title-desktop {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #002f6c;
+}
+
+.resource-title-dash-desktop {
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ff4757, #ff4041);
+  margin: auto auto 2rem auto;
+  width: 100px;
+  transform-origin: left;
+}
+
+
 /* Resource Cards Section */
 .resource-cards {
   display: grid;

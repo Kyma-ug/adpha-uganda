@@ -1,13 +1,31 @@
 import React from "react";
+import { motion } from 'framer-motion';
 import "./ResourceCenter.css";
 
-import playstore from './playstore.svg';
-import  appstore from './appstore.svg';
+// import playstore from './playstore.svg';
+// import  appstore from './appstore.svg';
 
 const ResourceCenter = () => {
   return (
     <div className="resource-center">
-      {/* Resource Center Section */}
+  
+      <motion.h2
+        className="resource-section-title-desktop"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Resource Center
+      </motion.h2>
+
+      <motion.div
+        className="resource-title-dash-desktop"
+        initial={{  width: 0  }}
+        whileInView={{ width: "100px" }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        viewport={{ once: true }}
+      />
       <section className="resource-cards">
         {/* Card 1 */}
         <div className="card card-a"
@@ -33,7 +51,7 @@ const ResourceCenter = () => {
       </section>
 
       {/* Banner Section */}
-      <section className="resource-banner">
+      {/* <section className="resource-banner">
         <div className="banner-content">
           <img
             src= {appstore}
@@ -57,7 +75,7 @@ const ResourceCenter = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

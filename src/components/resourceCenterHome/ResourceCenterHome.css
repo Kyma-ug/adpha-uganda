@@ -5,12 +5,25 @@
     text-align: center;
   }
   
-  .resource-center h2 {
+  
+  .resource-section-title-mobile {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #002c4b;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #002f6c;
   }
   
+  .resource-title-dash-mobile {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #ff4757, #ff4041);
+    margin: auto auto 2rem auto;
+    width: 100px;
+    transform-origin: left;
+  }
+
+
+
   /* Resources List */
   .resources-list {
     display: flex;
@@ -24,7 +37,7 @@
     overflow: hidden;
     border-radius: 8px;
     cursor: pointer;
-    height: 200px; /* Fixed height for mobile */
+    height: 150px;
   }
   
   .resource-image {
