@@ -6,11 +6,11 @@ const ContactHeader = () => {
   return (
     <div className="contact-header">
         
-        <div className='contact-header-li'>
+        {/* <div className='contact-header-li'>
             <FaLocationDot />
             <p>Muto Complex, main Floor Room 19, Masaka, Uganda</p>
 
-        </div>
+        </div> */}
         <div className='contact-header-li'>
             <FaClock />
             <p>Open 8am-5:00pm: Monday - Friday</p>

@@ -255,6 +255,8 @@ import { IoMenu, IoClose } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import "./Navbar.css";
 import adphalogo from "./adpha-logo.svg";
+import adphalogoo from "./adpha-logo-2.svg";
+import ContactHeader from "../contactHeader/ContactHeader";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -333,61 +335,74 @@ function Navbar() {
       <a href="/" className="navbar-logo-container" onClick={() => navigate("/")}>
         <div className="adpha-navbar-logo">
           <img
-            src={adphalogo}
+            src={adphalogoo}
             alt="Association of Persons with Disabilities Living with HIV (ADPHA) Uganda"
           />
         </div>
+        {/* <div className="adpha-logo-text">
+          <h1 className="adpha-logo-text">
+            ASSOCIATION OF<br />PERSONS WITH<br />DISABILITIES LIVING<br />WITH HIV
+          </h1>
+        </div> */}
       </a>
 
       {/* Navbar */}
-      <nav className="navbar" ref={navRef}>
-        <ul className="nav-links">
-          {[
-            { path: "/", label: "Home", id: "home" },
-            { path: "/about", label: "About Us", id: "about" },
-            { path: "/programs", label: "Programs", id: "programs" },
-            { path: "/contact", label: "Contact Us", id: "contact" },
-          ].map((link) => (
+
+      <div>
+        <ContactHeader />
+        <nav className="navbar" ref={navRef}>
+          
+          <ul className="nav-links">
+            {[
+              { path: "/", label: "Home", id: "home" },
+              { path: "/about", label: "About Us", id: "about" },
+              { path: "/programs", label: "Programs", id: "programs" },
+              { path: "/contact", label: "Contact Us", id: "contact" },
+            ].map((link) => (
+              <li
+                key={link.id}
+                className={`nav-item ${activeLink === link.id ? "active" : ""}`}
+                onClick={() => setActiveLink(link.id)}
+              >
+                <Link to={link.path}>{link.label}</Link>
+              </li>
+            ))}
             <li
-              key={link.id}
-              className={`nav-item ${activeLink === link.id ? "active" : ""}`}
-              onClick={() => setActiveLink(link.id)}
+              className={`nav-item ${activeLink === "resources" ? "active" : ""}`}
+              onMouseEnter={toggleDropdown}
+              onMouseLeave={closeDropdown}
             >
-              <Link to={link.path}>{link.label}</Link>
+              Resources
+              <span className="dropdown-icon">
+                <IoIosArrowDown />
+              </span>
+              <ul className={`dropdown-menu ${isDropdownOpen ? "open" : ""}`}>
+                {["Reports", "Blog", "Testimonials"].map((item) => (
+                  <li
+                    key={item}
+                    className="dropdown-item"
+                    onClick={() => setActiveLink("resources")}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </li>
-          ))}
-          <li
-            className={`nav-item ${activeLink === "resources" ? "active" : ""}`}
-            onMouseEnter={toggleDropdown}
-            onMouseLeave={closeDropdown}
-          >
-            Resources
-            <span className="dropdown-icon">
-              <IoIosArrowDown />
-            </span>
-            <ul className={`dropdown-menu ${isDropdownOpen ? "open" : ""}`}>
-              {["Reports", "Blog", "Testimonials"].map((item) => (
-                <li
-                  key={item}
-                  className="dropdown-item"
-                  onClick={() => setActiveLink("resources")}
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </li>
-          <div className="animated-bar" style={barStyle}></div>
-        </ul>
-        <div className="donate-button-wrapper">
-          <button className="intro-cta primary">
-            <Link to="/donate">Donate</Link>
+            <div className="animated-bar" style={barStyle}></div>
+          </ul>
+
+          <button className="menu-button" onClick={toggleDrawer} aria-label="Open menu">
+            <IoMenu />
           </button>
-        </div>
-        <button className="menu-button" onClick={toggleDrawer} aria-label="Open menu">
-          <IoMenu />
-        </button>
-      </nav>
+          <div className="donate-button-wrapper-nav">
+            <button className="intro-cta-nav primary-nav">
+              <Link to="/donate">Donate</Link>
+            </button>
+          </div>
+        </nav>
+
+      </div>
+      
 
       {/* Side Drawer */}
       <div className={`side-drawer ${isDrawerOpen ? "open" : ""}`}>
