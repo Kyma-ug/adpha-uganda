@@ -254,7 +254,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import "./Navbar.css";
-import adphalogo from "./ADPHA_Uganda_Logo-Navbar.svg";
+import adphalogo from "./adpha-logo.svg";
 
 function Navbar() {
   const navigate = useNavigate();
