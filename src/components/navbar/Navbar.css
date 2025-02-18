@@ -33,6 +33,31 @@
 }
 
 
+
+/* Drawer Header */
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.drawer-logo img {
+  height: 50px;
+}
+
+.close-button-drawer {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+
+
 .adpha-logo-text {
   display: flex;
   flex-direction: column;

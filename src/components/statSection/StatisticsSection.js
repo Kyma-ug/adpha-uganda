@@ -71,13 +71,8 @@ const StatisticsSection = () => {
       label: "Districts Covered",
       icon: ugandacoverage,
     },
-    // {
-    //   target: 52,
-    //   label: "Partners Engaged",
-    //   icon: partnership,
-    // },
     {
-      target: 9,
+      target: 16,
       label: "Years of Service",
       icon: yearsofservice,
     },
