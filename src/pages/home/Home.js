@@ -47,7 +47,7 @@ const partners = [
 
 
 const Home = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Adjust 768 as needed
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); 
 
   useEffect(() => {
     const handleResize = () => {

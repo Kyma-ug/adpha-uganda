@@ -257,6 +257,7 @@ import "./Navbar.css";
 import adphalogo from "./adpha-logo.svg";
 import adphalogoo from "./adpha-logo-2.svg";
 import ContactHeader from "../contactHeader/ContactHeader";
+import DonateButtonNav from "../donateButtonNav/DonateButtonNav";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -329,6 +330,21 @@ function Navbar() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
+
+
+  // my function that checks screen width
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); 
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize); // Clean up
+  }, []);
+
+
   return (
     <div className="navbar-container">
       {/* Logo */}
@@ -339,11 +355,7 @@ function Navbar() {
             alt="Association of Persons with Disabilities Living with HIV (ADPHA) Uganda"
           />
         </div>
-        {/* <div className="adpha-logo-text">
-          <h1 className="adpha-logo-text">
-            ASSOCIATION OF<br />PERSONS WITH<br />DISABILITIES LIVING<br />WITH HIV
-          </h1>
-        </div> */}
+        
       </a>
 
       {/* Navbar */}
@@ -394,11 +406,9 @@ function Navbar() {
           <button className="menu-button" onClick={toggleDrawer} aria-label="Open menu">
             <IoMenu />
           </button>
-          <div className="donate-button-wrapper-nav">
-            <button className="intro-cta-nav primary-nav">
-              <Link to="/donate">Donate</Link>
-            </button>
-          </div>
+          
+
+          {!isMobile && <DonateButtonNav />}
         </nav>
 
       </div>
@@ -459,3 +469,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
