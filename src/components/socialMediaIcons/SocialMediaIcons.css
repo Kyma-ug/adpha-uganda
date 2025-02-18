@@ -1,0 +1,35 @@
+/* SocialMediaIcons.css */
+.social-media-icons {
+    display: flex; /* Arrange icons horizontally */
+    gap: 20px; /* Adjust spacing between icons */
+    /* Other styling as needed, e.g., margin, padding */
+  }
+  
+  .social-icon-link {
+    display: inline-block; /* Makes the link behave like a block element */
+    /* Any styling for the link itself */
+  }
+  
+  .social-icon {
+    width: 24px;  /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+    /* Styling for the SVG icon itself, e.g., fill color */
+    fill: #fff; /* Example: White fill */
+    transition: fill 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  .social-icon:hover {
+    fill: #007bff; /* Example: Blue fill on hover */
+  }
+  
+  /* Responsive adjustments if needed */
+  @media (max-width: 768px) {
+    .social-media-icons {
+      gap: 15px; /* Adjust spacing for smaller screens */
+    }
+  
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }

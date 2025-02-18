@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLocationDot, FaPhone, FaClock } from 'react-icons/fa6';
 import './ContactHeader.css';
+import SocialMediaIcons from '../socialMediaIcons/SocialMediaIcons';
 
 const ContactHeader = () => {
   return (
@@ -11,9 +12,13 @@ const ContactHeader = () => {
             <p>Muto Complex, main Floor Room 19, Masaka, Uganda</p>
 
         </div> */}
-        <div className='contact-header-li'>
+        {/* <div className='contact-header-li'>
             <FaClock />
             <p>Open 8am-5:00pm: Monday - Friday</p>
+
+        </div> */}
+        <div className='contact-header-li'>
+            <SocialMediaIcons />
 
         </div>
         <div className='contact-header-li'>
