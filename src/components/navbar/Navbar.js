@@ -270,11 +270,23 @@ function Navbar() {
   const [isDrawerDropDownOpen, setIsDrawerDropDownOpen] = useState(false);
 
   // Sync active link with current path
+  // useEffect(() => {
+  //   const path = location.pathname;
+  //   setActiveLink(path === "/" ? "home" : path.slice(1));
+  //   updateBarStyle();
+  // }, [location]);
+
+
   useEffect(() => {
     const path = location.pathname;
     setActiveLink(path === "/" ? "home" : path.slice(1));
-    updateBarStyle();
-  }, [location]);
+
+    // Delay updateBarStyle slightly to ensure layout is complete
+    setTimeout(updateBarStyle, 50); // 50ms delay (adjust as needed)
+
+    window.addEventListener("resize", updateBarStyle);
+    return () => window.removeEventListener("resize", updateBarStyle);
+}, [location]);
 
   // Update animated bar position
   const updateBarStyle = () => {
