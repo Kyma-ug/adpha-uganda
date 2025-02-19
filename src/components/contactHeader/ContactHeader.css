@@ -18,10 +18,15 @@
     padding-top: 15px;
     padding-right: 50px;
     padding-bottom: 15px;
+    color: #002f6c;
 
 
 }
 
+.tele-nav {
+    /* padding-top: 0.2rem; */
+    margin-top: 8px;
+}
 .contact-header-li p {
     margin-left: 10px;
     font-size: 15px;

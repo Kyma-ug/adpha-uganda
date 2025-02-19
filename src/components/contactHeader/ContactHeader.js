@@ -21,7 +21,7 @@ const ContactHeader = () => {
             <SocialMediaIcons />
 
         </div>
-        <div className='contact-header-li'>
+        <div className='contact-header-li tele-nav'>
             <FaPhone />
             <p>+256 (0) 783 818 294 / +256 (0) 800 111 499</p>
 
