@@ -7,21 +7,31 @@ import facebook from './facebook.svg';
 import instagram from './insta.svg';
 import tiktok from './tiktok.svg';
 import whatsapp from './whatsapp.svg';
-
+import linkedin from './linkedin.svg';
+import x from './x.svg';
 
 
 const socialMediaLinks = [
   {
-    icon: facebook, 
-    link: 'https://www.facebook.com/ADPHA%20Uganda',
+    icon: linkedin, 
+    link: 'https://www.linkedin.com/in/adpha-uganda-4350b42a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', 
   },
   {
-    icon: tiktok,
+    icon: facebook, 
+    link: 'https://www.facebook.com/profile.php?id=100078388382137',
+  },
+  {
+    icon: x,
     link: 'https://x.com/adphauganda', 
   },
   {
     icon: instagram, 
-    link: 'https://x.com/adphauganda', 
+    link: 'https://www.instagram.com/adphauganda6404?igsh=ZmI0MG5xdmIyM2xv', 
+  },
+
+  {
+    icon: tiktok, 
+    link: 'https://www.tiktok.com/@adphauser045?lang=en', 
   },
   {
     icon: whatsapp, 

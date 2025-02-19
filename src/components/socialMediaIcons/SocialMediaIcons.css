@@ -1,13 +1,13 @@
 /* SocialMediaIcons.css */
 .social-media-icons {
-    display: flex; /* Arrange icons horizontally */
-    gap: 20px; /* Adjust spacing between icons */
-    /* Other styling as needed, e.g., margin, padding */
+    display: flex; 
+    gap: 20px; 
+    /* margin-top: 0.2rem; */
+    padding-top: 0.2rem;
   }
   
   .social-icon-link {
     display: inline-block; /* Makes the link behave like a block element */
-    /* Any styling for the link itself */
   }
   
   .social-icon {
