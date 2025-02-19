@@ -25,7 +25,7 @@
     padding-left: 30px;
 }
 
-.adpha-navbar-logo img {
+.adpha-navbar-logo {
     height: 120px;
     width: auto;
     /* width: 200px; */
@@ -460,12 +460,19 @@
       display: none; /* Hide nav links and button on mobile */
   }
 
+
   .menu-button {
       display: block; /* Show menu button on mobile */
   }
   .navbar-logo-container {
       padding-left: 10px;
   }
+
+  .adpha-navbar-logo {
+    height: 80px;
+  }
+
+
   .drawer-list {
     display: block;
   }

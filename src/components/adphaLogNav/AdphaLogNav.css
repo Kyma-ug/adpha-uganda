@@ -1,0 +1,13 @@
+.adpha-logo-svg {
+  height: 120px; /* Set the height */
+  width: auto;    /* To maintain aspect ratio, let width adjust automatically */
+}
+
+@media (max-width: 767px) {
+  
+    .adpha-logo-svg {
+  height: 80px; /* Set the height */
+  width: auto;    /* To maintain aspect ratio, let width adjust automatically */
+}
+
+}

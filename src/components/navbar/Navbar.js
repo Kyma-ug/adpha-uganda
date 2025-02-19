@@ -258,6 +258,7 @@ import adphalogo from "./adpha-logo.svg";
 import adphalogoo from "./adpha-logo-2.svg";
 import ContactHeader from "../contactHeader/ContactHeader";
 import DonateButtonNav from "../donateButtonNav/DonateButtonNav";
+import AdphaLogNav from "../adphaLogNav/AdphaLogNav";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -362,10 +363,14 @@ function Navbar() {
       {/* Logo */}
       <a href="/" className="navbar-logo-container" onClick={() => navigate("/")}>
         <div className="adpha-navbar-logo">
-          <img
+          {/* <img
             src={adphalogoo}
             alt="Association of Persons with Disabilities Living with HIV (ADPHA) Uganda"
-          />
+          /> */}
+
+          <AdphaLogNav />
+
+          
         </div>
         
       </a>
@@ -434,6 +439,8 @@ function Navbar() {
               src={adphalogo}
               alt="Association of Persons with Disabilities Living with HIV (ADPHA) Uganda"
             />
+
+
           </div>
           <button className="close-button-drawer" onClick={closeDrawer} aria-label="Close menu">
             <IoClose />
