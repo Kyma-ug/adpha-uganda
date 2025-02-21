@@ -91,21 +91,6 @@ const ProgramsOverview = () => {
         </p>
       </section>
 
-
-           
-        
-        
-
-
-
-
-
-
-
-
-
-
-
       <div className="programs-list-overview">
         {programsData.map((program, index) => (
           <motion.div
@@ -147,7 +132,7 @@ const ProgramsOverview = () => {
               />
               <p>{program.description}</p>
 
-        
+     
             <AnimatePresence>
                 {expandedProgram === program.id && (
                     <motion.div

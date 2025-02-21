@@ -29,17 +29,28 @@ const Contact = () => {
             <div className="contact-info">
               <h2>Get in touch</h2>
               <div className="contact-item">
-                <img src={LocationIcon} alt="" aria-hidden="true" /> {/* aria-hidden for decorative icons */}
-                <p>Muto Complex, main Floor Room 19, opposite Tropical Bank, Masaka, Uganda</p>
-              </div>
-              <div className="contact-item">
                 <img src={PhoneIcon} alt="" aria-hidden="true" />
-                <p>+256 (0) 783 818 294 | +256 (0) 800 111 499</p>
+                <div className="contact-item-text-container">
+                  <h3>Phone:</h3>
+                  <p>+256 (0) 783 818 294 | +256 (0) 800 111 499</p>
+                </div>
               </div>
               <div className="contact-item">
                 <img src={EmailIcon} alt="" aria-hidden="true" />
-                <p>info@adpha-uganda.org</p>
+                <div className="contact-item-text-container">
+                  <h3>Email:</h3>
+                  <p>info@adpha-uganda.org</p>
+                </div>
               </div>
+              <div className="contact-item">
+                <img src={LocationIcon} alt="" aria-hidden="true" /> {/* aria-hidden for decorative icons */}
+                <div className="contact-item-text-container">
+                  <h3>Loction:</h3>
+                  <p>Muto Complex, main Floor Room 19, opposite Tropical Bank, Masaka, Uganda</p>
+                </div>
+              </div>
+              
+          
             </div>
 
             <motion.div
