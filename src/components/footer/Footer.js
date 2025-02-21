@@ -1,32 +1,37 @@
 import React from "react";
 import "./Footer.css";
 import footerlogo from './adpha-logo-footer.svg';
-
+import { FaFacebook, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagramSquare, FaTiktok } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Column 1: Logo, Description, Social Media */}
         <div className="footer-column">
           <img src={footerlogo} alt="ADPHA Logo" className="footer-logo" />
           <p className="footer-description">
             Empowering persons with disabilities living with HIV & AIDS and those affected by TB through support and advocacy.
           </p>
           <div className="footer-socials">
-            <a href="https://facebook.com" aria-label="Facebook">
-              <svg className="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="..."></path></svg>
+            <a href="https://www.linkedin.com/in/adpha-uganda-4350b42a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn">
+              <FaLinkedin className="social-icon" />
             </a>
-            <a href="https://twitter.com" aria-label="Twitter">
-              <svg className="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="..."></path></svg>
+            <a href="https://www.facebook.com/profile.php?id=100078388382137" aria-label="Facebook">
+              <FaFacebook className="social-icon" />
             </a>
-            <a href="https://linkedin.com" aria-label="LinkedIn">
-              <svg className="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="..."></path></svg>
+            <a href="https://x.com/adphauganda" aria-label="X">
+              <FaXTwitter className="social-icon" />
+            </a>
+            <a href="https://www.instagram.com/adphauganda6404?igsh=ZmI0MG5xdmIyM2xv" aria-label="Instagram">
+              <FaInstagramSquare className="social-icon" />
+            </a>
+            <a href="https://www.tiktok.com/@adphauser045?lang=en" aria-label="Tiktok">
+              <FaTiktok className="social-icon" />
             </a>
           </div>
         </div>
 
-        {/* Column 2: Quick Links */}
         <div className="footer-column">
           <h4 className="footer-heading">Quick Links</h4>
           <ul className="footer-links">
@@ -39,20 +44,19 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Column 3: Get In Touch */}
-        <div className="footer-column">
+        <div className="footer-column footer-contact-col"> {/* Added class for styling */}
           <h4 className="footer-heading">Get in Touch</h4>
           <ul className="footer-contact">
-            <li>Email: <a href="mailto:info@adpha-uganda.org">info@adpha-uganda.org</a></li>
-            <li>Phone: <a href="tel:+256800111499">+256 (0) 800 111 499  </a></li>
-            <li>Support: <a href="mailto:info@adpha-uganda.org">support@adpha-uganda.org</a></li>
+            <li><FaEnvelope className="contact-icon" /> <a href="mailto:info@adpha-uganda.org">info@adpha-uganda.org</a></li>
+            <li><FaPhone className="contact-icon" /> <a href="tel:+256800111499">+256 (0) 800 111 499</a></li>
+            <li><FaEnvelope className="contact-icon" /> <a href="mailto:support@adpha-uganda.org">support@adpha-uganda.org</a></li>
           </ul>
         </div>
 
-        {/* Column 4: Visit Us */}
         <div className="footer-column">
           <h4 className="footer-heading">Visit Us</h4>
           <address className="footer-address">
+            <FaMapMarkerAlt className="address-icon" />
             Muto Complex, main Floor Room 19, opposite Tropical Bank,<br />
             Masaka, Uganda<br />
             Open 8am-5:00pm: Monday - Friday<br /><br />
@@ -61,7 +65,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Footer Bottom */}
       <div className="footer-bottom">
         <p>© 2025 ADPHA Uganda. All Rights Reserved.</p>
       </div>

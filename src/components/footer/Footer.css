@@ -4,6 +4,10 @@
   color: #ffffff;
   padding: 40px 20px;
   font-size: 16px;
+  height: 320px; /* Set desired height */
+  display: flex; /* Use flexbox for vertical centering */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute space between content */
 }
 
 .footer-container {
@@ -12,6 +16,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: flex-start; /* Align items to the top */
 }
 
 /* Footer Columns */
@@ -91,29 +96,67 @@
 /* Footer Bottom */
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   font-size: 14px;
   border-top: 1px solid #2c4a75;
   padding-top: 10px;
   color: #d0d7e1;
 }
 
+/* Contact Icons */
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; /* Space between icon and text */
+  color: #5ea9dd; /* Use contrasting color */
+  vertical-align: middle; /* Align icon with text */
+}
+
+.address-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px; /* Space between icon and text */
+    color: #5ea9dd; /* Use contrasting color */
+    vertical-align: top;
+}
+
+.footer-contact-col .footer-contact li { /* Target contact list items */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically align icon and text */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align to the left on mobile */
   }
 
   .footer-column {
-    text-align: center;
+    text-align: left; /* Align text to the left on mobile */
+    min-width: 100%; /* Make columns full width on mobile */
+    margin: 10px 0; /* Adjust margins for mobile */
   }
 
+    .footer {
+        height: auto; /* Reset height on mobile */
+    }
+
   .footer-logo {
-    margin: 0 auto 15px;
+    margin: 0 0 15px; /* Adjust margin for mobile */
   }
 
   .footer-bottom {
     font-size: 12px;
+    margin-top: 20px; /* Adjust margin for mobile */
   }
+
+    .footer-contact-col .footer-contact li { /* Target contact list items */
+        flex-direction: row;
+    }
+
+    .footer-address {
+        display: flex;
+        flex-direction: column;
+    }
 }
