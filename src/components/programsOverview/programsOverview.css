@@ -1,9 +1,9 @@
 
 .what-we-do {
-    width: 100%;
+    max-width: 1200px; /* Adjust width as needed */
     display: flex;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     align-items: flex-start;
     margin: 0 auto;
   }
@@ -30,6 +30,7 @@
   
   .what-we-do-text {
     font-size: 1.1rem;
+    margin: 0 auto;
     line-height: 1.6;
     text-align: justify;
     color: #333; /* Slightly lighter color for readability */
