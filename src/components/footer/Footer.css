@@ -4,10 +4,10 @@
   color: #ffffff;
   padding: 40px 20px;
   font-size: 16px;
-  height: 320px; /* Set desired height */
-  display: flex; /* Use flexbox for vertical centering */
-  flex-direction: column; /* Stack content vertically */
-  justify-content: space-between; /* Distribute space between content */
+  min-height: 320px;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
 }
 
 .footer-container {
@@ -46,7 +46,7 @@
 .social-icon {
   width: 30px;
   height: 30px;
-  fill: #ffffff;
+  color: #ffffff;
   transition: transform 0.3s ease, fill 0.3s ease;
 }
 
@@ -95,13 +95,16 @@
 
 /* Footer Bottom */
 .footer-bottom {
+  background-color: #193669; /* Same navy blue as the footer */
   text-align: center;
-  /* margin-top: 30px; */
   font-size: 14px;
   border-top: 1px solid #2c4a75;
   padding-top: 10px;
   color: #d0d7e1;
+  padding: 15px 0; /* Ensure proper spacing */
 }
+
+
 
 /* Contact Icons */
 .contact-icon {
