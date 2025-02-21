@@ -55,6 +55,28 @@ body {
   font-size: 1.2rem;
 }
 
+
+
+.contact-get-in-touch-title {
+  font-size: 2rem; 
+  font-weight: 700; 
+  color: #002c4b;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  
+}
+.contact-get-in-touch-dash {
+  /* width: 100px; */
+  height: 4px;
+  border-radius: 2px;
+  /* background: linear-gradient(90deg, #ff4757, #ff6b81); */
+  background: linear-gradient(90deg, #ff4757, #ff4041);
+  margin-bottom: 1.5rem;
+  
+}
+
+
+
 /* Contact Content (Info and Form) */
 .contact-content {
   display: flex;
@@ -84,7 +106,7 @@ body {
   padding: 1rem 0;
   display: flex;
   align-items: center; 
-  gap: 10px; /* Space between icon and text */
+  gap: 10px; 
 }
 
 .contact-item img {
@@ -106,14 +128,14 @@ body {
 
 .contact-form {
   flex: 1;
-  /* background-color: rgba(255, 99, 71, 0.1); */
   background: #eaecef;
   padding: 2rem;
   border-radius: 8px;
 }
 
 .contact-form h2 {
-  color: #0077cc;
+  font-size: 1.5rem;
+  color: #ff4757;
   margin-bottom: 0.5rem;
 }
 
@@ -121,7 +143,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.contact-form form { /* Style the form element */
+.contact-form form { 
     display: flex;
     flex-direction: column;
     gap: 15px;

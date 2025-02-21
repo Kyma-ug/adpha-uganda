@@ -27,7 +27,25 @@ const Contact = () => {
         >
           <div className="columns">
             <div className="contact-info">
-              <h2>Get in touch</h2>
+              <motion.h2
+                id="what-we-do-title" 
+                className="contact-get-in-touch-title"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                Get in touch
+              </motion.h2>
+              <motion.div 
+                className="contact-get-in-touch-dash" 
+                aria-hidden="true"
+                initial={{  width: 0 , originX: '0%' }}
+                whileInView={{ width: "100px" }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+              </motion.div>
               <div className="contact-item">
                 <img src={PhoneIcon} alt="" aria-hidden="true" />
                 <div className="contact-item-text-container">
