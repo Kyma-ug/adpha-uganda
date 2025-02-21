@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import footerlogo from './adpha-logo-footer.svg';
-import { FaFacebook, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaInstagramSquare, FaTiktok } from 'react-icons/fa';
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaLinkedin, FaEnvelope,  FaMapMarkerAlt, FaInstagramSquare, FaTiktok, FaWhatsapp } from 'react-icons/fa';
+import { FaXTwitter, FaPhone } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -49,6 +49,7 @@ const Footer = () => {
           <ul className="footer-contact">
             <li><FaEnvelope className="contact-icon" /> <a href="mailto:info@adpha-uganda.org">info@adpha-uganda.org</a></li>
             <li><FaPhone className="contact-icon" /> <a href="tel:+256800111499">+256 (0) 800 111 499</a></li>
+            <li><FaWhatsapp className="contact-icon" /> <a href="tel:+256758818294">+256 758 818 294</a></li>
             <li><FaEnvelope className="contact-icon" /> <a href="mailto:support@adpha-uganda.org">support@adpha-uganda.org</a></li>
           </ul>
         </div>
@@ -56,11 +57,11 @@ const Footer = () => {
         <div className="footer-column">
           <h4 className="footer-heading">Visit Us</h4>
           <address className="footer-address">
-            <FaMapMarkerAlt className="address-icon" />
+            {/* <FaMapMarkerAlt className="address-icon" /> */}
             Muto Complex, main Floor Room 19, opposite Tropical Bank,<br />
             Masaka, Uganda<br />
             Open 8am-5:00pm: Monday - Friday<br /><br />
-            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Get Directions</a>
+            <a href="https://maps.google.com/?q=-0.342304,31.737461" target="_blank" rel="noopener noreferrer">Get Directions</a>
           </address>
         </div>
       </div>

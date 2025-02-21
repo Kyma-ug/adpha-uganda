@@ -2,7 +2,7 @@
 .footer {
   background-color: #193669; /* Navy blue */
   color: #ffffff;
-  padding: 40px 20px;
+  padding: 20px 20px;
   font-size: 16px;
   min-height: 300px;
   display: flex; 
@@ -113,8 +113,9 @@
 .contact-icon {
   width: 20px;
   height: 20px;
-  margin-right: 5px; /* Space between icon and text */
-  color: #5ea9dd; /* Use contrasting color */
+  margin-right: 10px; /* Space between icon and text */
+  /* color: #5ea9dd; */
+  color:#ffffff;
   vertical-align: middle; /* Align icon with text */
 }
 
