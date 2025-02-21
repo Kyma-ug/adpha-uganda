@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import footerlogo from './adpha-logo.svg';
+import footerlogo from './adpha-logo-footer.svg';
 
 
 const Footer = () => {
