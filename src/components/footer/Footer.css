@@ -4,7 +4,7 @@
   color: #ffffff;
   padding: 40px 20px;
   font-size: 16px;
-  min-height: 320px;
+  min-height: 300px;
   display: flex; 
   flex-direction: column; 
   justify-content: space-between; 
@@ -16,7 +16,7 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start; 
 }
 
 /* Footer Columns */
@@ -27,7 +27,7 @@
 }
 
 .footer-logo {
-  width: 150px;
+  width: 100px;
   margin-bottom: 15px;
 }
 
@@ -95,13 +95,16 @@
 
 /* Footer Bottom */
 .footer-bottom {
-  background-color: #193669; /* Same navy blue as the footer */
+  background-color: #193669;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 14px;
   border-top: 1px solid #2c4a75;
-  padding-top: 10px;
+  padding-top: 30px;
   color: #d0d7e1;
-  padding: 15px 0; /* Ensure proper spacing */
 }
 
 
