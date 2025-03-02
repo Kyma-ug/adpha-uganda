@@ -1,0 +1,122 @@
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.subscribe-section {
+  background: linear-gradient(
+      rgba(0, 44, 75, 0.85),
+      rgba(0, 44, 75, 0.85)
+    ),
+    url("./sub.jpg") no-repeat center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.subscribe-content {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.subscribe-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.subscribe-content h2::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: tomato; 
+  display: block;
+  margin: 10px auto;
+}
+
+.subscribe-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subscribe-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 15px;
+  border: 2px solid tomato; /* Secondary color */
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.subscribe-input:focus {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.subscribe-button {
+  padding: 12px 30px;
+  background-color: tomato; /* Secondary color */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.subscribe-button:hover {
+  background-color: #d0312d; /* Slightly darker tomato color */
+  transform: scale(1.05);
+}
+
+.subscribe-button:active {
+  transform: scale(1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .subscribe-content h2 {
+    font-size: 2rem;
+  }
+
+  .subscribe-content p {
+    font-size: 1rem;
+  }
+
+  .subscribe-button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}

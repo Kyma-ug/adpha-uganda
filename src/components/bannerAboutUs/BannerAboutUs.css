@@ -1,0 +1,106 @@
+
+.banner-about-us {
+    width: 100%;
+    height: 350px; 
+    background-image: url('./ADPHA-team.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner-overlay-about-us {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+  
+  .banner-content-about-us {
+    max-width: 800px;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .banner-title-about-us {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.65rem;
+  }
+  
+  .banner-title-about-us-dash {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    /* margin: auto; */
+    margin-bottom: 1rem;
+    width: 100px;
+    
+  }
+
+  .banner-description-about-us {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-button-about-us {
+    background: #007bff; 
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-button-about-us:hover {
+    background: #005bb5; 
+  }
+  
+  .arrow-icon-about-us {
+    font-size: 1rem;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .banner-about-us {
+      height: 250px; 
+    }
+  
+    .banner-title-about-us {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .banner-title-about-us-dash{
+        margin-bottom: 0.6rem;
+    }
+  
+    .banner-description-about-us {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .contact-button-about-us {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }

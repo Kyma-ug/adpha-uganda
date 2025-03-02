@@ -1,0 +1,145 @@
+
+.statistics-section {
+  padding: 2rem 2rem 3rem 2rem;
+  color: #fff;
+  text-align: center;
+  background: url('./adpha-3.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; 
+  position: relative;
+}
+
+.statistics-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.our-impact-home-title {
+  text-align: center;
+  font-size: var(--font-xl); /* 2rem */
+  margin-bottom: var(--space-sm); /* 1rem */
+  font-weight: var(--font-bold); /* 700 */
+  color: #ffffff;
+}
+
+.our-impact-home-dash {
+  height: 4px;
+  border-radius: var(--radius-sm); /* 4px */
+  background: var(--red-gradient); /* linear-gradient(90deg, #ff4757, #ff4041) */
+  margin: 0 auto calc(var(--space-lg) * 1.5) auto; /* 0 auto 3rem auto */
+  width: 100px;
+  transform-origin: left;
+}
+
+
+
+
+
+.statistics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.8); 
+  border-radius: 12px;
+  padding: 2rem;
+  width: 250px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  /* background: linear-gradient(90deg, #ff4757, #ff6b81); */
+  background-color: #ff4041;
+  border-radius: 0 0 12px 12px;
+}
+
+
+.icon-wrapper-stats {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #002f6c;
+  margin-bottom: 1rem;
+}
+
+
+#aligning-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+
+@media screen and (max-width: 768px) {
+  .statistics-grid {
+    justify-content: center; 
+  }
+
+
+  .stat-card {
+    width: calc(50% - 1.2rem); 
+    margin-bottom: 2rem;
+    padding: 1.4rem;
+  }
+
+  .our-impact-home-title {
+    font-size: 2rem; /* 1.5rem */
+    margin-bottom: var(--space-sm); /* 1rem */
+  }
+  
+  .our-impact-home-dash {
+    width: 80px;
+    margin: 0 auto var(--space-md) auto; /* 0 auto 1.5rem auto - closer on mobile */
+
+  }
+
+  .statistics-grid {
+    gap: 1rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+ 
+}
+
+/* Media query for smaller mobile screens (optional) */
+@media screen and (max-width: 480px) {
+  .stat-card {
+    width: calc(100% - 2rem); /* 1 column on very small screens */
+  }
+  .stat-value {
+    font-size: 2rem;
+  }
+}

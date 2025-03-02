@@ -1,0 +1,482 @@
+.navbar-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    height: 130px;
+}
+
+
+.navbar {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.navbar-logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.adpha-navbar-logo {
+    height: 120px;
+    width: auto;
+    /* width: 200px; */
+    /* padding: 0.1rem; */
+    margin-bottom: 0.2rem;
+}
+
+
+
+/* Drawer Header */
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.drawer-logo img {
+  height: 50px;
+}
+
+.close-button-drawer {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+.adpha-logo-text span {
+  color: #0056b3;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  position: relative;
+  font-size: 17px;
+  font-weight: 600;
+  /* color: #333; */
+  color: #002f6c;
+  text-transform: uppercase;
+}
+
+
+
+.nav-item:hover,
+.nav-item.active {
+  color: #0056b3;
+  /* font-weight: bold; */
+}
+
+.nav-item.active {
+  font-weight: bold;
+}
+
+
+.animated-bar {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #0056b3;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.donate-button-wrapper-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    margin-top: 5px;
+    padding-left: 50px;
+}
+
+
+.donate-button-nav {
+    height: 45px;
+
+  background-color: #ff5a5f; /* Bright and attention-grabbing color */
+  color: #fff; /* Text color */
+  padding: 0.75rem 1.5rem; /* Spacing */
+  border: none; /* Remove border */
+  border-radius: 0.5rem; /* Smooth edges */
+  font-size: 17px; /* Readable text */
+  font-weight: 600; /* Slightly bold text */
+  text-transform: uppercase; /* Capitalized text */
+  cursor: pointer; /* Indicate clickability */
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.donate-button-nav:hover {
+  background-color: #e24e4e; /* Slightly darker shade on hover */
+  transform: scale(1.05); 
+}
+
+.donate-button-nav:active {
+  background-color: #c84444; /* Even darker shade for active state */
+  transform: scale(1); /* Reset scale on click */
+}
+
+
+
+.intro-cta-nav {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.intro-cta-nav.primary-nav {
+  color: #fff;
+  /* background-color: #0072ce; */
+  background-color: #007bff;
+  border: none;
+}
+
+.intro-cta-nav.primary-nav:hover {
+  background-color: #005bb5;
+}
+
+.intro-cta-nav.secondary-nav {
+  color: #0072ce;
+  background-color: #fff;
+  border: 2px solid #0072ce;
+}
+
+.intro-cta-nav.secondary-nav:hover {
+  background-color: #0072ce;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  position: absolute;
+  left: -25px;
+  
+  top: 100%;
+  width: 200px;
+  
+  /* color: #333; */
+  color: #002f6c;
+  background-color: #ffffff;
+  /* transition: transform 0.3s ease-in-out; */
+
+  padding: 16px 16px 0 16px;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  list-style: none;
+  z-index: 10;
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+.dropdown-icon {
+  margin-left: 0.5rem;
+  margin-bottom: 2.5px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+
+
+
+
+.navbar-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+
+
+
+/* Dropdown Items */
+.dropdown-item {
+  position: relative;
+  /* color: #333; */
+  color: #002f6c;
+  padding: 0.5rem 0;
+  gap: 0.5rem;
+
+  padding: 10px 10px;
+  /* margin-left: 20px; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+  /* padding-bottom: 0; */
+}
+
+.dropdown-item:hover {
+  color: #0077cc;
+  transform: translateX(10px); /* Translate text to the right */
+}
+
+/* Pseudo-element for dropdown-item */
+.dropdown-item::before {
+  content: ""; /* Add empty content */
+  position: absolute;
+  left: -15px; /* Position to the left of the text */
+  top: 50%;
+  padding-left: 5px;
+  
+  transform: translateY(-50%) scale(0); /* Initial scale 0 */
+  width: 10px; /* Target width */
+  height: 10px; /* Target height */
+  background-color: #0077cc; /* Dot color */
+  border-radius: 50%; /* Make it a circle */
+  transition: transform 0.3s ease; /* Smooth scale transition */
+  
+}
+
+.dropdown-item::before:last-child {
+  /* margin-top: 10px; */
+}
+
+.dropdown-item:hover::before {
+  transform: translateY(-50%) scale(1); /* Scale up on hover */
+}
+
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+}
+
+
+.menu-button {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* Side Drawer */
+.side-drawer {
+  position: fixed;
+  top: 0;
+  left: 0; /* Start from the left */
+  transform: translateX(-100%); /* Initially hidden */
+  width: 80%; /* Or a fixed width like 300px */
+  max-width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2); /* Shadow on the right */
+  z-index: 2000;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+.side-drawer.open {
+  transform: translateX(0); /* Slide in to view */
+}
+
+
+
+.drawer-list {
+  list-style: none;
+  padding: 2rem;
+  margin: 0;
+}
+
+.drawer-item {
+  position: relative;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.drawer-item a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.drawer-item:hover a {
+  transform: translateX(10px);
+  color: #0077cc;
+}
+
+/* Bullet circle on hover */
+.drawer-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  background-color: #0077cc;
+  border-radius: 50%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.drawer-item:hover::before {
+  width: 8px;
+  height: 8px;
+}
+
+.drawer-item:hover::before:last-child {
+  width: 0;
+  height: 0;
+}
+
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+
+/* SideDrawer Dropdown Styling */
+
+.drawer-dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.drawer-dropdown.open {
+  max-height: 300px; /* Adjust based on dropdown content */
+  opacity: 1;
+}
+
+.drawer-dropdown .dropdown-item {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  /* color: #333; */
+  color: #002f6c;
+  transition: color 0.3s ease;
+}
+
+.drawer-dropdown .dropdown-item:hover {
+  color: #0077cc;
+}
+
+/* Resources Icon Styling */
+.drawer-icon {
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.drawer-icon.flipped {
+  transform: rotate(180deg);
+}
+
+.drawer-dot-margin {
+  margin-left: 5px;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .navbar {
+      flex-direction: row; 
+      justify-content: space-between; /* Distribute space between logo and button */
+  }
+
+  .nav-links, .donate-button-wrapper {
+      display: none; /* Hide nav links and button on mobile */
+  }
+
+
+  .menu-button {
+      display: block; /* Show menu button on mobile */
+  }
+  .navbar-logo-container {
+      padding-left: 10px;
+  }
+
+  .adpha-navbar-logo {
+    height: 80px;
+  }
+
+
+  .drawer-list {
+    display: block;
+  }
+}
+
+
+

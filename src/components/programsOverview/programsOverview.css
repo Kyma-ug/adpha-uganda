@@ -1,0 +1,228 @@
+
+
+.what-we-do {
+  max-width: 1200px; /* Adjust width as needed */
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg) 0; /* 2rem 0 */
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+.what-we-do-title {
+  font-size: var(--font-xl); /* 2rem */
+  font-weight: var(--font-bold); /* 700 */
+  color: var(--header-color); /* #002f6c */
+  margin-bottom: var(--space-sm); /* 1rem */
+  text-align: left;
+}
+
+.what-we-do-title-dash {
+  height: 4px;
+  border-radius: var(--radius-sm); /* 4px */
+  background: var(--red-gradient); /* linear-gradient(90deg, #ff4757, #ff4041) */
+  margin-bottom: var(--space-lg); /* 2rem */
+}
+
+.what-we-do-text {
+  font-size: 1.1rem; /* 1.25rem */
+  line-height: 1.7;
+  text-align: left;
+  color:  #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .what-we-do {
+    padding: var(--space-md) var(--space-sm); /* 1.5rem 1rem */
+    align-items: left; /* Center content on mobile */
+  }
+
+  .what-we-do-title-dash {
+    width: 80px; /* Slightly smaller for mobile */
+    margin-bottom: var(--space-md); /* 1.5rem */
+  }
+
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+
+
+
+
+
+.programs-component-overview {
+  /* padding: 4rem 2rem; */
+  background: #f9f9f9;
+  text-align: center;
+}
+
+
+/* Programs List */
+.programs-list-overview {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-item-overview {
+  display: flex;
+  /* align-items: center; */
+  background: #eaecef;
+  margin-bottom: 4rem;
+  gap: 2rem;
+}
+
+.program-item-overview.left-image {
+  flex-direction: row;
+}
+
+.program-item-overview.right-image {
+  flex-direction: row-reverse;
+}
+
+.program-image-container-overview {
+  flex: 1;
+}
+
+.program-image-overview {
+  width: 100%;
+  height: 445px;
+  object-fit: cover;
+  
+  
+}
+
+.program-content-overview {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center;
+  padding: 2rem 2rem;
+}
+
+.program-content-overview h3 {
+  font-size: 1.8rem;
+  color: #002c4b;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  width: 100%; /* Ensure full width */
+}
+
+.title-dash-overview {
+  width: 100px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ff4757, #ff4041);
+  margin-bottom: 1.5rem;
+}
+
+.program-content-overview p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left; /* Align description to the left */
+}
+
+
+.program-content-overview a {
+  background: transparent;
+  /* color: #0073e6; */
+  padding: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.program-content-overview a::after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 2.5px;
+  border-radius: 1.25px;
+  /* background: linear-gradient(90deg, #ff4757, #ff6b81); */
+  background: linear-gradient(90deg, #ff4757, #ff4041);
+  margin-top: 0.5rem;
+}
+
+.program-content-overview a:hover::after {
+  background: linear-gradient(90deg, #0073e6, #00a8ff);
+}
+
+.program-content-overview button {
+  background: #0073e6;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.program-content-overview button:hover {
+  background: #005bb5;
+}
+
+.program-details-overview {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f1f1f1;
+  border-radius: 8px;
+  width: 100%; /* Ensure full width */
+  text-align: left; /* Align details text to the left */
+}
+
+.program-details-overview p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+
+@media (max-width: 768px) {
+  .program-item-overview {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .program-item-overview.left-image {
+    flex-direction: column;
+  }
+
+  .program-item-overview.right-image {
+    flex-direction: column;
+  }
+
+  .program-image-overview {
+    height: 200px;
+    width: 100%;
+  }
+
+  .title-dash-overview {
+    margin: 0 auto 1rem;
+  }
+
+  .program-content-overview {
+    text-align: left;
+  }
+
+  .program-content-overview h3 {
+    font-size: 1.4rem;
+    color: #002c4b;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    width: 100%; 
+  }
+  
+}

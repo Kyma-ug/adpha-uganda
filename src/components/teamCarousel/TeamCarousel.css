@@ -1,0 +1,180 @@
+/* Team Carousel */
+.team-carousel {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carousel-title-team {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #002f6c;
+  margin-bottom: 1rem;
+}
+
+.title-dash-team {
+  height: 4px;
+  border-radius: 2px;
+  /* background: red; */
+  /* background: linear-gradient(90deg, #007bff, #0056b3); */
+  background: linear-gradient(90deg, #ff4757, #ff4041);
+  margin: auto auto 2rem auto;
+  width: 100px;
+  transform-origin: left;
+}
+
+/* Carousel Container */
+.carousel-container-team {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.carousel-track-team {
+  display: flex;
+  gap: 1rem;
+  transition: transform 2s ease-in-out;
+}
+
+/* Carousel Card */
+.carousel-card-team {
+  perspective: 1000px;
+  cursor: pointer;
+  height: 400px;
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s ease;
+}
+
+.card-face-team {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  transition: transform 0.8s ease;
+}
+
+.card-front-team {
+  transform: rotateY(0deg);
+}
+
+.card-back-team {
+  transform: rotateY(180deg);
+  background: #f9f9f9;
+}
+
+.carousel-card-team.flipping-team .card-front-team {
+  transform: rotateY(180deg);
+}
+
+.carousel-card-team.flipping-team .card-back-team {
+  transform: rotateY(0deg);
+}
+
+.image-container-carousel-team {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.team-title {
+  font-size: 1rem;
+  color: #555;
+}
+
+.quotes-bg-team {
+  position: absolute;
+  opacity: 0.25;
+  width: 80%;
+  height: 80%;
+}
+
+.team-message {
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Navigation */
+.carousel-nav-team {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  pointer-events: none;
+}
+
+.carousel-icon-team {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  pointer-events: auto;
+  transition: color 0.3s ease;
+}
+
+.carousel-icon-team:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots */
+.carousel-dots-team {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.dot-team {
+  width: 8px;
+  height: 8px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: transform 0.5s;
+}
+
+.dot-team.active-team {
+  /* background: #007bff; */
+  background: #ff4041;
+  /* background: linear-gradient(90deg, #007bff, #0056b3); */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-card-team {
+    width: 80vw;
+  }
+
+  .carousel-track-team {
+    gap: 0.5rem;
+  }
+}

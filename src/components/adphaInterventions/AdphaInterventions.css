@@ -1,0 +1,239 @@
+/* AdphaInterventions.css */
+.adpha-interventions {
+    padding: 4rem 2rem;
+    background: #f5f7fa;
+    position: relative;
+    /* overflow: hidden; */
+    /* min-height: 100vh; */
+}
+
+/* Faint SVG Background */
+.background-svg-intervention {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.1;
+}
+
+/* Header */
+.interventions-title {
+
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #002f6c;
+    text-align: center;
+    letter-spacing: 1.5px;
+    position: relative;
+    z-index: 1;
+}
+
+.interventions-intro {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #333;
+    max-width: 800px;
+    margin: 2rem auto 3rem auto;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Project Cards */
+.projects-container-intervention {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.project-card-intervention {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #ff4757;
+    /* padding: 2rem; */
+   
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+}
+
+.project-card-intervention::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #ff4757, #ff4041);
+    opacity: 0.7;
+}
+
+.project-image-intervention {
+    width: 100%;
+    /* height: auto; */
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content-intervention {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1; 
+}
+
+.project-description-intervention {
+    font-size: 1.1rem;
+    /* color: #4a5e77; */
+   
+    line-height: 1.7;
+    margin-top: 1rem; /* Space between title and description */
+    flex-grow: 1; /* Description will take up available space */
+    /* overflow-y: auto;  */
+    color: #333;
+    margin-bottom: 1rem;
+
+    z-index: 1;
+}
+
+.project-title-intervention {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #002f6c;
+    position: relative;
+}
+
+.project-title-intervention-dash {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #ff4757, #ff4041);
+    margin: auto;
+    width: 100px;
+    transform-origin: left;
+  }
+
+
+.project-title-intervention::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #ff4757, #ff4041);}
+
+/* Call to Action */
+.cta-section-intervention {
+    text-align: center;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-text-intervention {
+    font-size: 1.3rem;
+    color: #4a5e77;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.cta-button-intervention {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.cta-button-intervention::after {
+    content: '→';
+    position: absolute;
+    right: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button-intervention:hover,
+.cta-button-intervention:focus {
+    background: #1557b0;
+    transform: translateX(5px);
+}
+
+.cta-button-intervention:hover::after,
+.cta-button-intervention:focus::after {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.cta-button-intervention:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .interventions-title {
+        font-size: 2rem;
+    }
+
+    .interventions-intro {
+        font-size: 1rem;
+    }
+
+    .projects-container-intervention {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .project-card-intervention {
+        flex-direction: column;
+    }
+
+    .project-image-intervention {
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .project-content-intervention {
+        padding: 1.5rem;
+    }
+
+    .project-title-intervention {
+        font-size: 1.4rem;
+    }
+
+    .cta-text-intervention {
+        font-size: 1.1rem;
+    }
+
+    .cta-button-intervention {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .adpha-interventions {
+        padding: 2rem 1rem;
+    }
+}

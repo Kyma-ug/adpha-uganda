@@ -1,0 +1,113 @@
+.terms-policies {
+  padding: var(--space-xl) var(--space-md); /* 3rem 1.5rem */
+  background-color: var(--light-gray-bg); /* #f9fafb */
+}
+
+.terms-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.terms-title {
+  text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #002f6c;
+}
+
+.terms-dash {
+  height: 4px;
+  border-radius: var(--radius-sm); /* 4px */
+  background: var(--red-gradient); /* linear-gradient(90deg, #ff4757, #ff4041) */
+  margin: 0 auto var(--space-lg) auto; /* 0 auto 2rem auto */
+}
+
+.terms-section {
+  margin-bottom: var(--space-lg); /* 2rem */
+}
+
+.terms-section h2 {
+  font-size: var(--font-lg); /* 1.5rem */
+  font-weight: var(--font-bold); /* 700 */
+  color: var(--dark-text); /* #1e2a3c */
+  margin-bottom: var(--space-sm); /* 1rem */
+}
+
+.terms-section p {
+  font-size: var(--font-md); /* 1.25rem */
+  color:#333 ; /* 64748b */
+  line-height: 1.7;
+  margin-bottom: var(--space-md); /* 1.5rem */
+}
+
+.terms-section ul {
+  list-style: disc;
+  padding-left: var(--space-lg); /* 2rem */
+  margin-bottom: var(--space-md); /* 1.5rem */
+}
+
+.terms-section li {
+  font-size: var(--font-md); /* 1.25rem */
+  color: #333; /* #64748b */
+  margin-bottom: var(--space-sm); /* 1rem */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .terms-policies {
+    padding: var(--space-lg) var(--space-sm); /* 2rem 1rem */
+  }
+
+  .terms-title {
+    font-size: var(--font-xl); /* 2rem */
+    margin-bottom: var(--space-xs); /* 0.5rem */
+  }
+
+  .terms-dash {
+    width: 80px;
+    margin-bottom: var(--space-md); /* 1.5rem */
+  }
+
+  .terms-section {
+    margin-bottom: var(--space-md); /* 1.5rem */
+  }
+
+  .terms-section h2 {
+    font-size: var(--font-md); /* 1.25rem */
+    margin-bottom: var(--space-xs); /* 0.5rem */
+  }
+
+  .terms-section p,
+  .terms-section li {
+    font-size: var(--font-sm); /* 1rem */
+  }
+
+  .terms-section ul {
+    padding-left: var(--space-md); /* 1.5rem */
+  }
+}
+
+@media (max-width: 480px) {
+  .terms-policies {
+    padding: var(--space-md) var(--space-xs); /* 1.5rem 0.5rem */
+  }
+
+  .terms-title {
+    font-size: var(--font-lg); /* 1.5rem */
+  }
+
+  .terms-dash {
+    width: 60px;
+    margin-bottom: var(--space-sm); /* 1rem */
+  }
+
+  .terms-section p,
+  .terms-section li {
+    font-size: var(--font-xs); /* 0.875rem */
+  }
+
+  .terms-section ul {
+    padding-left: var(--space-sm); /* 1rem */
+  }
+}

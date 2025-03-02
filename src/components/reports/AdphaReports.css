@@ -1,0 +1,153 @@
+
+.adpha-reports {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+  }
+  
+  .reports-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #002f6c;
+  }
+  
+.title-dash-reports {
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ff4757, #ff4041);
+  margin: auto auto 3rem auto;
+  width: 100px;
+  transform-origin: left;
+}
+
+  .reports-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .report-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* Ensures the link takes up the full card space */
+  }
+  
+  .report-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+  }
+  
+  .report-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    /* background: #3498db; */
+    background-color: #ff4041;
+  }
+  
+  .report-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .report-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .report-summary {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .report-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #95a5a6;
+    margin-bottom: 1rem;
+  }
+  
+  .report-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    margin-top: auto; /* Pushes the link to the bottom of the card */
+  }
+  
+  .report-card-link:hover .report-link,
+  .report-card-link:focus .report-link {
+    background: #2980b9;
+  }
+  
+  /* Accessibility focus styles */
+  .report-card-link:focus {
+    outline: none;
+    /* box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .reports-title {
+      font-size: 2rem;
+    }
+  
+    .report-card {
+      padding: 1.5rem;
+    }
+  
+    .report-image {
+      height: 150px;
+    }
+  
+    .report-title {
+      font-size: 1.3rem;
+    }
+  
+    .report-summary {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .adpha-reports {
+      padding: 2rem 1rem;
+    }
+  
+    .reports-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .report-image {
+      height: 120px;
+    }
+  }

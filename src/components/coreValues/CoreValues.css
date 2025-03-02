@@ -1,0 +1,73 @@
+
+.core-values {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .section-title-core-values {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #002f6c;
+  }
+  
+  .title-dash-core {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #ff4757, #ff4041);
+    margin: auto;
+    width: 100px;
+    transform-origin: left;
+  }
+
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .value-card {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .icon-wrapper-core-value {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .value-title-core-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .value-description-core-value {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .values-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

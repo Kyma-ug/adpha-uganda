@@ -1,0 +1,41 @@
+
+
+.contact-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+
+
+.contact-header-li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    color: #002f6c;
+
+
+}
+
+.tele-nav {
+    /* padding-top: 0.2rem; */
+    margin-top: 8px;
+}
+.contact-header-li p {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .contact-header {
+        display: none;
+    }
+  
+}

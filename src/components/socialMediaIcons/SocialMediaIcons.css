@@ -1,0 +1,36 @@
+/* SocialMediaIcons.css */
+.social-media-icons {
+    display: flex; 
+    gap: 12px; 
+    /* margin-top: 0.2rem; */
+    padding-top: 0.2rem;
+  }
+  
+  .social-icon-link {
+    display: inline-block; /* Makes the link behave like a block element */
+  }
+  
+  .social-icon {
+    width: 20px;  /* Adjust icon size */
+    height: 20px; /* Adjust icon size */
+    fill: #fff; /* Example: White fill */
+    transition: fill 0.3s ease; /* Smooth color transition on hover */
+    padding-top: 0.2rem;
+
+  }
+  
+  .social-icon:hover {
+    fill: #007bff; /* Example: Blue fill on hover */
+  }
+  
+  /* Responsive adjustments if needed */
+  @media (max-width: 768px) {
+    .social-media-icons {
+      gap: 15px; /* Adjust spacing for smaller screens */
+    }
+  
+    .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }

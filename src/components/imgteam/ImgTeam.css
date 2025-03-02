@@ -1,0 +1,50 @@
+.image-clip-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image-clip {
+  position: relative;
+}
+
+.image-clip img {
+  width: 100%;
+  height: auto;
+}
+
+.clipped-square {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  background-color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.header-pseudo {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  margin-bottom: 10px;
+}
+
+.description {
+  line-height: 1.5;
+}
