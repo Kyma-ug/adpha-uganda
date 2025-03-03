@@ -2,8 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaTimes, FaEnvelope } from "react-icons/fa";
-import { Html, Container, Text, Button } from "@react-email/components";
-import "./NewsLetter.css";
+import "../NewsLetter.css";
 
 const NewsLetter = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,17 +41,17 @@ const NewsLetter = () => {
     setError(null);
 
     try {
-      const functionUrl = process.env.REACT_APP_NETLIFY_FUNCTION_URL + "subscribe";
-      console.log("Function URL:", functionUrl); // Add this line
-
-      console.log("Form Data:", formData);
-      const response = await fetch(functionUrl, {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || "https://adpha-newsletter-backend.onrender.com";
+      const response = await fetch(`${backendUrl}/api/subscribe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) throw new Error("Subscription failed");
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Subscription failed");
+      }
 
       setFormData({
         firstName: "",
@@ -62,10 +61,9 @@ const NewsLetter = () => {
         interests: [],
       });
       setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 5000); // Hide after 5 seconds
+      setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
-      console.error("Subscription failed", error);
-      setError("Subscription failed. Please try again.");
+      setError(error.message);
     } finally {
       setIsLoading(false);
     }
@@ -248,37 +246,5 @@ const NewsLetter = () => {
     </>
   );
 };
-
-// Email Templates for Backend
-export const SubscriberEmail = ({ firstName, email }) => (
-  <Html>
-    <Container>
-      <Text style={{ fontSize: "16px", color: "#333" }}>
-        Hello {firstName}, thank you for subscribing to our newsletter!
-      </Text>
-      <Text>We’re excited to keep you updated at {email}.</Text>
-      <Button
-        href="https://yourwebsite.com"
-        style={{ background: "#4CAF50", color: "#fff", padding: "10px 20px" }}
-      >
-        Visit Our Site
-      </Button>
-    </Container>
-  </Html>
-);
-
-export const AdminEmail = ({ formData }) => (
-  <Html>
-    <Container>
-      <Text style={{ fontSize: "16px", color: "#333" }}>
-        New Newsletter Subscription
-      </Text>
-      <Text>Name: {formData.firstName} {formData.lastName}</Text>
-      <Text>Email: {formData.email}</Text>
-      <Text>Location: {formData.location || "Not provided"}</Text>
-      <Text>Interests: {formData.interests.join(", ") || "None selected"}</Text>
-    </Container>
-  </Html>
-);
 
 export default NewsLetter;
