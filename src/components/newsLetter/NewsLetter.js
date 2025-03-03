@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaTimes, FaEnvelope } from "react-icons/fa";
-import "../NewsLetter.css";
+import "./NewsLetter.css";
 
 const NewsLetter = () => {
   const [isOpen, setIsOpen] = useState(false);
