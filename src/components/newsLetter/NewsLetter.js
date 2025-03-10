@@ -39,37 +39,20 @@ const NewsLetter = () => {
     e.preventDefault();
     setIsLoading(true);
     setError(null);
-  
+
     try {
       const backendUrl = process.env.REACT_APP_BACKEND_URL || "https://adpha-newsletter-backend.onrender.com";
-      
-      // Step 1: Push data to MongoDB
       const response = await fetch(`${backendUrl}/api/subscribe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-  
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || "Subscription failed");
       }
-  
-      // Step 2: Send a welcome email using Resend
-      const emailResponse = await fetch(`${backendUrl}/api/send-welcome-email`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: formData.email,
-          firstName: formData.firstName,
-        }),
-      });
-  
-      if (!emailResponse.ok) {
-        throw new Error("Failed to send welcome email");
-      }
-  
-      // Clear the form and show success message
+
       setFormData({
         firstName: "",
         lastName: "",
@@ -85,7 +68,6 @@ const NewsLetter = () => {
       setIsLoading(false);
     }
   };
-
 
   return (
     <>

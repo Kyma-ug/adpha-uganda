@@ -5,9 +5,8 @@ import "./Contact.css";
 import LocationIcon from "./location.svg";
 import EmailIcon from "./email.svg";
 import PhoneIcon from "./phone.svg";
-// import SendIcon from "./send.svg";
+import SendIcon from "./send.svg";
 import LocationMap from "../../components/locationMap/LocationMap";
-import ContactForm from "../../components/contactForm/ContactForm";
 
 const Contact = () => {
   return (
@@ -72,9 +71,24 @@ const Contact = () => {
           
             </div>
 
-            <ContactForm />
-
-         
+            <motion.div
+              className="contact-form"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h2>Have a question?</h2>
+              <p>Leave your question here.</p>
+              <form> {/* Add onSubmit handler for form submission */}
+                <input type="text" placeholder="Your Name" aria-label="Your Name" required /> {/* Added required attribute */}
+                <input type="email" placeholder="Your Email" aria-label="Your Email" required /> {/* Added required attribute */}
+                <textarea placeholder="Your Message" aria-label="Your Message" required></textarea> {/* Added required attribute */}
+                <button type="submit">
+                  Send Message
+                  <img src={SendIcon} alt="" aria-hidden="true" />
+                </button>
+              </form>
+            </motion.div>
           </div>
         </motion.div>
 
