@@ -1,0 +1,89 @@
+/* DevelopmentPartnersDescription.css */
+
+.partners-description-container {
+  padding: 1.5rem 1rem;
+  margin: 2rem 0;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-left: 5px solid #4a90e2; */ /* Removed as requested */
+}
+
+.partners-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem; /* Increased space before the grid */
+  text-align: left; /* Ensure left alignment by default */
+}
+
+.partners-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  /* 2 columns on desktop */
+  grid-template-columns: repeat(2, 1fr);
+
+  /* Gap between rows and columns */
+  gap: 0.6rem 10rem;
+}
+
+.partner-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  /* Removed margin-bottom, rely on grid gap */
+  padding-left: 1em; /* Space for the bullet */
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  text-align: left; /* Ensure left alignment */
+}
+
+/* Position the custom bullet closer using absolute positioning */
+.partner-item::before {
+  content: '•';
+  color: #4a90e2;
+  font-weight: bold;
+  position: absolute;
+  left: 0; /* Position at the very start of the padding area */
+  top: 0.05em; /* Fine-tune vertical alignment relative to text */
+  line-height: 1.6; /* Match parent line-height */
+}
+
+.partner-name {
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.partner-dates {
+  /* Keeping dates simple, inheriting color */
+  margin-left: 0.2rem; /* Smaller space after the semicolon */
+}
+
+/* --- Responsive --- */
+/* Apply 1-column layout on screens smaller than 768px */
+@media (max-width: 767px) {
+  .partners-description-container {
+    padding: 1rem 0.8rem;
+    margin: 1.5rem 0;
+  }
+
+  .partners-list {
+    /* Switch to 1 column on mobile */
+    grid-template-columns: 1fr;
+    gap: 0.5rem 0; /* Only row gap needed */
+  }
+
+  .partners-intro {
+    font-size: 1rem;
+    /* text-align: left; */ /* Already left by default/parent styles */
+  }
+
+  .partner-item {
+    font-size: 0.95rem;
+    /* text-align: left; */ /* Ensure left alignment if needed */
+  }
+}

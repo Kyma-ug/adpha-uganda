@@ -12,6 +12,8 @@ import ResourceCenter from '../../components/resourcecenter/ResourceCenter';
 import CarouselHomeHero from '../../components/carouselHomeHero/CarouselHomeHero';
 import ResourceCenterHome from '../../components/resourceCenterHome/ResourceCenterHome';
 import CarouselPartners from '../../components/partnercarousel/CarouselPartners';
+import BlogHighlight from '../../components/blogHighlight/BlogHighlight';
+import MoreBlogs from '../../components/moreBlogs/MoreBlogs';
 
 
 
@@ -38,6 +40,8 @@ const Home = () => {
       <MakingADifference />
       <StatisticsSection />
       <CarouselPartners />
+      <BlogHighlight />
+      {/* <MoreBlogs /> */}
 
       
       {!isMobile && <ResourceCenter />}

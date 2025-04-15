@@ -13,6 +13,7 @@ import nerve from './nerve-logo.png';
 import frontline from './frontline-aids-logo.png';
 import agilityfund from './pva-agility-fund-logo.png';
 import stoptbpartnership from './stop-tb-by-unops-logo.png';
+import DevelopmentPartnersDescription from '../developmentPartnersDescription/DevelopmentPartnersDescription';
 
 
 const partnersData = [
@@ -80,7 +81,7 @@ const CarouselPartners = ({ partners = partnersData }) => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        Our Partners
+        Our Development Partners
       </motion.h2>
       <motion.div
         className="title-dash-partners"
@@ -89,6 +90,8 @@ const CarouselPartners = ({ partners = partnersData }) => {
         transition={{ duration: 0.8, delay: 0.3 }}
         viewport={{ once: true }}
       />
+
+      <DevelopmentPartnersDescription />
 
       <div className="carousel-wrapper-partners">
         <button className="carousel-btn-partners prev-partners" onClick={prevSlide} aria-label="Previous partners">
