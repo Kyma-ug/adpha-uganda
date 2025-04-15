@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import './AdphaReports.css';
 
 // import annualReport from '/adpha-uganda-annual-report-2023.pdf';
-import disabilityRights from './disability-reproductive-rights.webp';
+import disabilityRights from './skill-aquisition-for-pwds.jpg';
 import peerSupport from './peer-support.webp';
 import capacitybuilding from './organisaztional-capacity-building.webp';
 import advocacy from './advocacy-task-force.webp';

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
 import './ResourceCenterHome.css';
 
-import annualreport from './adpha-annual-report-2023-launch.jpg';
+import annualreport from './skill-aquisition-for-pwds.jpg';
 import accessibilityreport from './accessibilty-assesment-of-health-services.jpg';
 import strategicplan from './strategic-plan-2024-2029.jpg';
 import knowledgesurvey from './knowledge-survey.jpg';
