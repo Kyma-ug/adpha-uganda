@@ -11,6 +11,7 @@ import WhyChooseUs from '../../components/whychooseus/WhyChooseUs';
 import CoreValues from '../../components/coreValues/CoreValues';
 import TeamCarousel from '../../components/teamCarousel/TeamCarousel';
 import BannerAboutUs from '../../components/bannerAboutUs/BannerAboutUs';
+import AboutUsHistorySection from '../../components/historySection/AboutUsHistorySection';
 
 const AboutUsHero = () => {
   return (
@@ -43,6 +44,7 @@ const AboutUsHero = () => {
       </section>
 
       <WhoWeAreAboutUs />
+      <AboutUsHistorySection />
       <MissionVision />
       <CoreValues />
       <WhyChooseUs />

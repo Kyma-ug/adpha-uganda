@@ -71,7 +71,7 @@
 .program-item-overview {
   display: flex;
   /* align-items: center; */
-  background: #eaecef;
+  background: var(--light-blue-bg);
   margin-bottom: 4rem;
   gap: 2rem;
 }

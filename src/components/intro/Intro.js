@@ -2,7 +2,7 @@ import React from "react";
 import {  useNavigate } from "react-router-dom";
 
 import { motion } from "framer-motion";
-import "./Intro.css"; // CSS for the section
+import "./Intro.css"; 
 import adphaimage from './adpha-2.jpg'
 
 const Intro = () => {

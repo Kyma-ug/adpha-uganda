@@ -1,0 +1,79 @@
+.about-history-section {
+  padding: 80px 20px;
+  background: var(--light-blue-bg);
+  display: flex;
+  justify-content: center;
+}
+
+.about-history-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* Ensures both image and text take full equal height */
+  gap: 40px;
+  width: 100%;
+}
+
+.about-history-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-history-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #002f6c;
+  margin-bottom: 1rem;
+}
+
+.about-history-underline {
+  width: 100px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #ff4757, #ff4041);
+  margin-bottom: 20px;
+}
+
+.about-history-description {
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-history-image-container {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.about-history-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the height and maintains aspect */
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-history-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-history-image-container {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .about-history-image {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .about-history-description {
+    text-align: left;
+  }
+}

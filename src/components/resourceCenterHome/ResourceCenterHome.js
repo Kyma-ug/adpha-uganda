@@ -17,7 +17,7 @@ const ResourceCenterHome = () => {
             id: 1,
             title: "2024 - 2029 Strategic Plan",
             image: strategicplan,
-            document: "/adpha-uganda-annual-report-2023.pdf",
+            document: "/adpha-strategic-plan-2024-2029.docx",
         },
         {
             id: 2,
