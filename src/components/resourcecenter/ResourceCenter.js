@@ -46,10 +46,10 @@ const ResourceCenter = () => {
         </div>
         {/* Card 3 */}
         <div className="card card-c"
-          onClick={() => window.open("/covid-19-knowledge-atitude-and-practices-survey.pdf", "_blank")}
+          onClick={() => window.open("/adpha-uganda-annual-report-2023.pdf", "_blank")}
         >
           <div className="card-overlay"></div>
-          <div className="card-title">2024 Annual Report</div>
+          <div className="card-title">ADPHA Uganda Annual Report 2023</div>
         </div>
       </section>
       <Link to="/reports">

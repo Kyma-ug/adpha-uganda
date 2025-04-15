@@ -37,7 +37,7 @@ const AdphaReports = ({ reports }) => {
       date: 'Nov 2024', 
       link: '#', 
       image: capacitybuilding,
-      pdf: '/adpha-uganda-annual-report-2023.pdf'
+      pdf: '/adpha-strategic-plan-2024-2029.docx'
     },
     { 
       id: 4, 

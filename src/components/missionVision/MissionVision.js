@@ -31,9 +31,12 @@ const MissionVision = () => {
               >
               </motion.div>
               <p className="card-text-mission-vision">
-                “A society where all Persons with Disabilities realize
-                their rights without discrimination in HIV/AIDS, SRHR, TB, other infectious diseases
-                service delivery and interventions”
+                
+
+
+                “Eliminate barriers in service
+                delivery and drivers of HIV/AIDS, SRH, TB and other infectious diseases among
+                persons with disabilities”.
               </p>
             </div>
           </div>
@@ -59,9 +62,10 @@ const MissionVision = () => {
               </motion.div>
 
               <p className="card-text-mission-vision">
-                “Eliminate barriers in service
-                delivery and drivers of HIV/AIDS, SRH, TB and other infectious diseases among
-                persons with disabilities”.
+                “A society where all Persons with Disabilities realize
+                their rights without discrimination in HIV/AIDS, SRHR, TB, other infectious diseases
+                service delivery and interventions”.
+                
               </p>
             </div>
           </div>
