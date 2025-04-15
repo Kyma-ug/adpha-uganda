@@ -30,13 +30,13 @@
   width: 100%; 
 } */
 
-.chairperson-image-container {
+.chairperson-image-container-blog-highlight {
   flex-shrink: 0; /* Prevent image container from shrinking */
   width: 150px; /* Fixed width for the image container */
   position: relative; /* For potential future pseudo-elements */
 }
 
-.chairperson-image {
+.chairperson-image-blog-highlight {
   display: block;
   width: 100%;
   height: 150px; /* Make height equal to width for aspect ratio before rounding */
@@ -46,14 +46,14 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.text-content {
+.text-content-blog-highlight {
   flex-grow: 1; /* Allow text content to take remaining space */
   position: relative; /* For pseudo-elements */
   padding-left: 15px; /* Space for the vertical line */
 }
 
 /* --- Creative Red Pseudo-element: Vertical Line --- */
-.text-content::before {
+.text-content-blog-highlight::before {
     content: '';
     position: absolute;
     left: 0;
@@ -68,24 +68,24 @@
     transition: opacity 0.4s ease, transform 0.8s ease;
 }
 
-.blog-highlight-container:hover .text-content::before {
+.blog-highlight-container:hover .text-content-blog-highlight::before {
     opacity: 1; /* Fade in on container hover */
     transform: scaleY(1); /* Scale up on container hover */
 }
 
 
-.blog-title {
+.blog-title-blog-highlight {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #2d3748; /* Dark gray */
+  color: var(--header-color);
   margin-top: 0;
   margin-bottom: 0.75rem;
   position: relative;
   display: inline-block; /* Allows pseudo-element to be positioned correctly */
 }
 
-.blog-summary,
-.blog-full-text p { /* Apply styles to paragraphs within full text */
+.blog-summary-blog-highlight,
+.blog-full-text-blog-highlight p { /* Apply styles to paragraphs within full text */
   font-size: 1.1rem;
   color: #333;
   line-height: 1.7;
@@ -93,7 +93,7 @@
   margin-bottom: 1rem;
 }
 
-.blog-full-text {
+.blog-full-text-blog-highlight {
   overflow: hidden; /* Required for framer-motion animations */
 }
 
@@ -168,63 +168,64 @@
 
 
 
-.blog-author {
+.blog-author-blog-highlight {
   margin-top: 1.5rem;
   font-style: italic;
-  color: #718096; /* Light gray */
+  color: #4a5568; /* Light gray */
   font-size: 0.9rem;
   text-align: right;
   border-top: 1px dashed #e0e0e0;
   padding-top: 0.75rem;
 }
 
-.blog-author strong {
+.blog-author-blog-highlight strong {
+  font-size: 1rem;
   font-style: normal;
   font-weight: 600;
-  color: #4a5568;
+  color: #333;
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .blog-highlight-container {
     flex-direction: column;
-    align-items: center; /* Center items */
+    align-items: center; 
     gap: 1.5rem;
     padding: 1.5rem 1rem;
   }
 
-  .chairperson-image-container {
+  .chairperson-image-container-blog-highlight {
     width: 120px; /* Smaller image on mobile */
     margin-bottom: 0; /* Remove bottom margin if centered */
   }
 
-  .chairperson-image {
+  .chairperson-image-blog-highlight {
     height: 120px;
   }
 
-  .text-content {
-     width: 100%; /* Take full width */
-     padding-left: 10px; /* Adjust padding for vertical line */
-     text-align: center; /* Center text */
+  .text-content-blog-highlight {
+     width: 100%; 
+     padding-left: 10px; 
+     /* text-align: center;  */
   }
 
    /* Adjust vertical line position */
-   .text-content::before {
+   .text-content-blog-highlight::before {
       left: -5px; /* Move slightly outside if needed */
    }
 
-  .blog-title {
+  .blog-title-blog-highlight {
     font-size: 1.5rem;
-    text-align: center;
+    /* text-align: center; */
   }
 
-  .blog-author {
-    text-align: center;
+  .blog-author-blog-highlight {
+    /* text-align: center; */
   }
 
-  .read-more-button {
+  .read-more-button-blog-highlight {
       display: block; /* Make button block level */
-      margin-left: auto;
-      margin-right: auto; /* Center button */
+      /* margin-left: auto; */
+      /* margin-right: auto;  */
   }
 }

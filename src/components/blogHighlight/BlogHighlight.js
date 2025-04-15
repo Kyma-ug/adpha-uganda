@@ -38,25 +38,25 @@ const BlogHighlight = () => {
   return (
     <div className="blog-highlight-container">
       {/* Chairperson Image Section */}
-      <div className="chairperson-image-container">
+      <div className="chairperson-image-container-blog-highlight">
         <motion.img
           src={chairpersonImage}
           alt={`${authorName}, ${authorTitle}`}
-          className="chairperson-image"
+          className="chairperson-image-blog-highlight"
           whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
         />
       </div>
 
       {/* Text Content Section */}
-      <div className="text-content">
-        <h2 className="blog-title">{title}</h2>
-        <p className="blog-summary">{summary}</p>
+      <div className="text-content-blog-highlight">
+        <h2 className="blog-title-blog-highlight">{title}</h2>
+        <p className="blog-summary-blog-highlight">{summary}</p>
 
         <AnimatePresence initial={false}>
           {isExpanded && (
             <motion.div
               key="content"
-              className="blog-full-text"
+              className="blog-full-text-blog-highlight"
               variants={contentVariants}
               initial="collapsed"
               animate="expanded"
@@ -80,7 +80,7 @@ const BlogHighlight = () => {
           {isExpanded ? 'Read Less' : 'Read More'}
         </motion.button>
 
-        <div className="blog-author">
+        <div className="blog-author-blog-highlight">
           <strong>{authorName}</strong> <br />
           {authorTitle}
         </div>
